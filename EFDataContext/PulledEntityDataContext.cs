@@ -48,7 +48,7 @@
 //        public static void UpdatePulledEntityWithChanges(IUpdatePatientEntityWithChanges<IPatients> msg)
 //        {
 
-//            using (var ctx = new MRManagerDBContext())
+//            using (var ctx = new GenSoftDBContext())
 //            {
 //                var exp = FindExpressionClass.FindExpression<Patients, PatientInfo>();
 
@@ -195,7 +195,7 @@
 //        {
 //            try
 //            {
-//                using (var ctx = new MRManagerDBContext())
+//                using (var ctx = new GenSoftDBContext())
 //                {
 //                    var props = msg.ViewType.GetProperties().ToList();
 //                    var res =
@@ -241,7 +241,7 @@
 //        {
 //            try
 //            {
-//                using (var ctx = new MRManagerDBContext())
+//                using (var ctx = new GenSoftDBContext())
 //                {
 //                    var props = msg.ViewType.GetProperties().ToList();
 //                    var matchtype = msg.GetType().GenericTypeArguments[0];

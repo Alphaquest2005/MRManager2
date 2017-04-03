@@ -1,10 +1,9 @@
 ﻿{
   "dependencies": {
     "FluentValidation.Net35": "1.0.1",
-    "JB.Common.Collections.Reactive": "0.8.103-pre",
-    "JB.Common.Reactive": "0.8.103-pre",
-    "ReactiveProperty": "2.9.0",
-    "reactiveui-core": "7.0.0"
+    "JB.Common.Collections.Reactive": "0.8.107-pre",
+    "JB.Common.Reactive": "0.8.107-pre",
+    "ReactiveProperty": "3.6.0"
   },
   "frameworks": {
     "net461": {}

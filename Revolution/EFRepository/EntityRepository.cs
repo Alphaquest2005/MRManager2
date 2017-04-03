@@ -1,15 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Linq.Dynamic;
-using System.Linq.Expressions;
 using SystemInterfaces;
 using Common;
-using CommonMessages;
-using EFRepository;
 using EventAggregator;
-using EventMessages;
 using EventMessages.Events;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;

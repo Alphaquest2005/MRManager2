@@ -6,17 +6,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Reactive;
 using SystemInterfaces;
 using Core.Common.UI;
 using Interfaces;
-using Reactive.Bindings;
-using ReactiveUI;
 using ViewModel.Interfaces;
-using ViewModelInterfaces;
 
 namespace ViewModels
 {

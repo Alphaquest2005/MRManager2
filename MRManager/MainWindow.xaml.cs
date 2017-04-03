@@ -5,12 +5,12 @@ using System.Windows;
 using System.Windows.Input;
 using SystemInterfaces;
 using Core.Common.UI;
-using EF.DBContexts;
-using EF.Entities;
+using GenSoft.DBContexts;
+using GenSoft.Entities;
 using RevolutionLogger;
 using Application = System.Windows.Application;
 
-namespace MRManager
+namespace GenSoft
 {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
@@ -20,14 +20,14 @@ namespace MRManager
 		public MainWindow()
 		{
 			InitializeComponent();
-            if (File.Exists("MRManager-Logs.xml")) File.Delete("MRManager-Logs.xml");
+            if (File.Exists("GenSoft-Logs.xml")) File.Delete("GenSoft-Logs.xml");
             Logger.Initialize();
 
             Logger.Log(LoggingLevel.Info, $"The UI Thread is:{Application.Current.Dispatcher.Thread.ManagedThreadId}");
 
             Task.Run(() =>
 		    {
-                var dbContextAssembly = new MRManagerDBContext().GetType().Assembly;
+                var dbContextAssembly = new GenSoftDBContext().GetType().Assembly;
                 var entitiesAssembly = new EFEntity<IEntity>().GetType().Assembly;
                 BootStrapper.BootStrapper.Instance.StartUp( true, Process.WorkFlow.MachineInfoData.MachineInfos, Process.WorkFlow.Processes.ProcessInfos, Process.WorkFlow.Processes.ProcessComplexEvents, ViewModel.WorkFlow.ProcessViewModels.ProcessViewModelInfos.Skip(1).ToList(),dbContextAssembly,entitiesAssembly);
 		    }).ConfigureAwait(false);

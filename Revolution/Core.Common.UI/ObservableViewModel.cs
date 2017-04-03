@@ -10,8 +10,6 @@ using FluentValidation;
 using FluentValidation.Results;
 using JB.Collections.Reactive;
 using Reactive.Bindings;
-using ReactiveUI;
-using RevolutionData.Context;
 using ViewModel.Interfaces;
 using ViewModelInterfaces;
 
@@ -36,18 +34,9 @@ namespace Core.Common.UI
         
 
         private ReactiveProperty<IProcessState<TEntity>> _state = new ReactiveProperty<IProcessState<TEntity>>(null, ReactivePropertyMode.DistinctUntilChanged) ;
-        public ReactiveProperty<IProcessState<TEntity>> State
-        {
-            get { return _state; }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref _state, value);
-                // must broad cast event to handle simultanious events per single event IE continue chaining events
-                
-            }
-        }
-       
-       
+        public ReactiveProperty<IProcessState<TEntity>> State => _state;
+
+
         public dynamic GetValue([CallerMemberName] string property = "UnspecifiedProperty")
         {
             if (State == null || State.Value == null) return null;
@@ -84,12 +73,12 @@ namespace Core.Common.UI
             {
                 ChangeTracking[property] = value;
             }
-            this.RaisePropertyChanged(property);
+            this.OnPropertyChanged(property);
         }
         public ObservableDictionary<string, dynamic> ChangeTracking { get; } = new ObservableDictionary<string, dynamic>();
         public void NotifyPropertyChanged(string propertyName)
         {
-            this.RaisePropertyChanged(propertyName);
+            this.OnPropertyChanged(propertyName);
         }
 
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MRManager.Properties {
+namespace GenSoft.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

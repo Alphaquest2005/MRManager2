@@ -2,7 +2,6 @@
 using SystemInterfaces;
 using CommonMessages;
 using ViewModel.Interfaces;
-using ViewModelInterfaces;
 
 namespace ViewMessages
 {

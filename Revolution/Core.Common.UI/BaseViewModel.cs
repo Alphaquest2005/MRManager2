@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reactive;
+using System.Runtime.CompilerServices;
 using SystemInterfaces;
 using Common;
+using Common.Annotations;
 using Reactive.Bindings;
-using ReactiveUI;
 using RevolutionEntities.Process;
 using Utilities;
 using ViewModel.Interfaces;
@@ -13,7 +14,7 @@ using ViewModel.Interfaces;
 
 namespace Core.Common.UI
 {
-    public abstract class BaseViewModel<TViewModel> : ReactiveObject, IViewModel
+    public abstract class BaseViewModel<TViewModel> : IViewModel, INotifyPropertyChanged
     {
         public ISystemSource Source { get; }
 
@@ -44,13 +45,20 @@ namespace Core.Common.UI
         public Type ViewModelType { get; }
         public int Priority { get; }
 
-        public Dictionary<string, ReactiveCommand<IViewModel, Unit>> Commands { get; } = new Dictionary<string, ReactiveCommand<IViewModel, Unit>>();
+        public Dictionary<string, ReactiveCommand<IViewModel>> Commands { get; } = new Dictionary<string, ReactiveCommand<IViewModel>>();
 
         public IViewInfo ViewInfo { get; }
         public ISystemProcess Process { get; set; }
 
-        
-        
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
 
     }
 }

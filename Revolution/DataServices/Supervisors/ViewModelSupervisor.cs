@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 using SystemInterfaces;
 using Akka.Actor;
 using Akka.Routing;
-using CommonMessages;
 using EventAggregator;
 using EventMessages.Events;
-using RevolutionData;
 using RevolutionEntities.Process;
-using StartUp.Messages;
 using ViewMessages;
 using ViewModel.Interfaces;
 

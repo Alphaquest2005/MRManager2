@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.Composition;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -14,7 +13,6 @@ using FluentValidation;
 using FluentValidation.Results;
 using JB.Collections.Reactive;
 using Reactive.Bindings;
-using ReactiveUI;
 using RevolutionEntities;
 
 using ViewModel.Interfaces;
@@ -41,8 +39,8 @@ namespace Core.Common.UI
         public ObservableListViewModel(IViewInfo viewInfo, List<IViewModelEventSubscription<IViewModel, IEvent>> eventSubscriptions, List<IViewModelEventPublication<IViewModel, IEvent>> eventPublications, List<IViewModelEventCommand<IViewModel, IEvent>> commandInfo, ISystemProcess process, Type orientation, int priority) : base(process,viewInfo,eventSubscriptions,eventPublications,commandInfo, orientation, priority)
         {
            // Validator = new EntityValidator<TEntity>();
-            State.WhenAnyValue(x => x.Value).Subscribe(x => UpdateLocalState(x));
-            CurrentEntity.WhenAnyValue(x => x.Value).Subscribe(x => ChangeTracking.Clear());
+            State.Subscribe(x => UpdateLocalState(x));
+            CurrentEntity.Subscribe(x => ChangeTracking.Clear());
 
             _instance = this;
         }
@@ -76,21 +74,21 @@ namespace Core.Common.UI
         public ReactiveProperty<IProcessStateList<TEntity>> State
         {
             get { return _state; }
-            set { this.RaiseAndSetIfChanged(ref _state, value);}
+           
         }
 
         private ReactiveProperty<TEntity> _currentEntity = new ReactiveProperty<TEntity>(NullEntity<TEntity>.Instance,ReactivePropertyMode.DistinctUntilChanged);
         public ReactiveProperty<TEntity> CurrentEntity
         {
             get { return _currentEntity; }
-            set { this.RaiseAndSetIfChanged(ref _currentEntity, value); }
+           
         }
 
 
         public virtual ReactiveProperty<ObservableList<TEntity>> EntitySet
         {
             get { return _entitySet; }
-            set { this.RaiseAndSetIfChanged(ref _entitySet, value); }
+           
         }
 
 
@@ -133,14 +131,14 @@ namespace Core.Common.UI
             {
                 ChangeTracking[property] = value;
             }
-            this.RaisePropertyChanged(property);
+            this.OnPropertyChanged(property);
         }
 
         
         public ObservableDictionary<string, dynamic> ChangeTracking { get; } = new ObservableDictionary<string, dynamic>();
         public void NotifyPropertyChanged(string propertyName)
         {
-            this.RaisePropertyChanged(propertyName);
+            this.OnPropertyChanged(propertyName);
         }
 
         private ObservableBindingList<TEntity> _changeTrackingList = new ObservableBindingList<TEntity>();

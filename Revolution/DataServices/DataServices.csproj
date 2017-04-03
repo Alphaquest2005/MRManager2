@@ -86,10 +86,6 @@
     <Compile Include="Utils\LoadEntitySetExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DesignTimeData\DesignTimeData.csproj">
-      <Project>{e7ec52dc-8650-4cf0-bcab-ed8a9473d2cf}</Project>
-      <Name>DesignTimeData</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Interfaces\Interfaces.csproj">
       <Project>{ad573873-c8e6-4ea3-93f5-0d39a92fc9f6}</Project>
       <Name>Interfaces</Name>

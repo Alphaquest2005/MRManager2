@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
@@ -10,10 +9,8 @@ using SystemInterfaces;
 using BootStrapper;
 using CommonMessages;
 using EventAggregator;
-using EventMessages;
-using EventMessages.Commands;
 using EventMessages.Events;
-using ReactiveUI;
+using Reactive.Bindings;
 using RevolutionEntities.Process;
 using ViewModel.Interfaces;
 
@@ -30,10 +27,10 @@ namespace Core.Common.UI
                 var subject = itm.Subject.Invoke(viewModel);
 
 
-                if (subject.GetType() == Observable.Empty<ReactiveCommand<IViewModel, Unit>>().GetType())
+                if (subject.GetType() == Observable.Empty<ReactiveCommand<IViewModel>>().GetType())
                 {
                     var publishMessage = CreateCommandMessageAction<IViewModel>(viewModel, itm);
-                    var cmd = ReactiveCommand.Create(publishMessage);
+                    var cmd = (ReactiveCommand<IViewModel>) new ReactiveCommand<IViewModel>().Subscribe(publishMessage);
 
                     viewModel.Commands.Add(itm.Key, cmd);
                 }

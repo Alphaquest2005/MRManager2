@@ -2,21 +2,15 @@
 using System.Collections.Generic;
 using SystemInterfaces;
 using Actor.Interfaces;
-using Common;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reactive.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using DomainMessages;
-using EventMessages;
 using EventMessages.Commands;
 using EventMessages.Events;
-using Interfaces;
-using RevolutionEntities;
 using RevolutionEntities.Process;
 using Utilities;
-using ViewModel.Interfaces;
 
 namespace RevolutionData
 {

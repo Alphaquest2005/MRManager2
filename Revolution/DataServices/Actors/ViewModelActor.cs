@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
-using System.Reactive.Linq;
 using SystemInterfaces;
 using Akka.Actor;
 using BootStrapper;
-using CommonMessages;
 using EventAggregator;
-using EventMessages;
 using EventMessages.Events;
-using RevolutionData;
 using RevolutionEntities.Process;
-using StartUp.Messages;
 using ViewMessages;
 using ViewModel.Interfaces;
 

@@ -34,7 +34,7 @@
 //        public static void UpdatePulledEntityWithChanges<TEntity>(IUpdatePatientEntityWithChanges<TEntity> msg) where TEntity : IEntity
 //        {
 
-//            using (var ctx = new MRManagerDBContext())
+//            using (var ctx = new GenSoftDBContext())
 //            {
 //                var exp = FindExpressionClass.FindExpression<Patients, PatientInfo>();
 

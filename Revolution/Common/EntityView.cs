@@ -1,9 +1,5 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Runtime.Serialization;
 using SystemInterfaces;
-using Common.Dynamic;
-using ReactiveUI;
 
 namespace Common.DataEntites
 {

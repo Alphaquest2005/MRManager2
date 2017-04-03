@@ -73,13 +73,9 @@
     <Compile Include="ScreenModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DesignTimeData\DesignTimeData.csproj">
-      <Project>{e7ec52dc-8650-4cf0-bcab-ed8a9473d2cf}</Project>
-      <Name>DesignTimeData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EFEntities\EF.Entities.csproj">
+    <ProjectReference Include="..\EFEntities\GenSoft.Entities.csproj">
       <Project>{fad2a8c8-a1b4-4a3c-8e37-0388c0e3733c}</Project>
-      <Name>EF.Entities</Name>
+      <Name>GenSoft.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Expressions\Expressions.csproj">
       <Project>{2ab54ce2-e09b-40b4-9cbf-184b3e770b0d}</Project>

@@ -1,27 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using SystemInterfaces;
-using CommonMessages;
-
-
 using EventAggregator;
-using EventMessages;
 using Expressions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.Extensions.Logging;
 using System.Linq.Dynamic;
-using BootStrapper;
 using Common;
 
 using EventMessages.Events;
-using MoreLinq;
 using RevolutionData.Context;
 using RevolutionEntities.Process;
-using Utilities;
-using Source = Common.Source;
 
 namespace EFRepository
 {

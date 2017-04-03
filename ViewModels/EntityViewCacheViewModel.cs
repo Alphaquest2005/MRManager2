@@ -1,14 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using SystemInterfaces;
-using Core.Common.UI;
-using Interfaces;
-using JB.Collections.Reactive;
-using Reactive.Bindings;
-using ViewModel.Interfaces;
-using ViewModelInterfaces;
-
 namespace ViewModels
 {
     //[Export(typeof(IEntityViewCacheViewModel<>))]

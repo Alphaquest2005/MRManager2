@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Reactive;
 using System.Reactive.Linq;
 using SystemInterfaces;
-using Interfaces;
-using ReactiveUI;
+using Reactive.Bindings;
 using RevolutionEntities.Process;
 using RevolutionEntities.ViewModels;
 using ViewMessages;
 using ViewModel.Interfaces;
+
 
 namespace RevolutionData
 {
@@ -34,7 +34,7 @@ namespace RevolutionData
                 new ViewEventCommand<IFooterViewModel, INavigateToView>(
                     key:"ViewHome",
                     commandPredicate:new List<Func<IFooterViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s => new ViewEventCommandParameter(
                         new object[] {ViewMessageConst.Instance.ViewHome},
@@ -45,7 +45,7 @@ namespace RevolutionData
                 new ViewEventCommand<IFooterViewModel, INavigateToView>(
                     key:"ViewPatientSummary",
                     commandPredicate:new List<Func<IFooterViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s => new ViewEventCommandParameter(
                         new object[] {ViewMessageConst.Instance.ViewPatientSummary},
@@ -56,7 +56,7 @@ namespace RevolutionData
                 new ViewEventCommand<IFooterViewModel, INavigateToView>(
                     key:"ViewPatientVisit",
                     commandPredicate:new List<Func<IFooterViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s => new ViewEventCommandParameter(
                         new object[] {ViewMessageConst.Instance.ViewPatientVisit},
@@ -67,7 +67,7 @@ namespace RevolutionData
                 new ViewEventCommand<IFooterViewModel, INavigateToView>(
                     key:"ViewPatientSyntom",
                     commandPredicate:new List<Func<IFooterViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s => new ViewEventCommandParameter(
                         new object[] {ViewMessageConst.Instance.ViewPatientSyntom},
@@ -78,7 +78,7 @@ namespace RevolutionData
                 new ViewEventCommand<IFooterViewModel, INavigateToView>(
                     key:"ViewInterview",
                     commandPredicate:new List<Func<IFooterViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s => new ViewEventCommandParameter(
                         new object[] {ViewMessageConst.Instance.ViewInterview},
@@ -89,7 +89,7 @@ namespace RevolutionData
                 new ViewEventCommand<IFooterViewModel, INavigateToView>(
                     key:"ViewPatientResponses",
                     commandPredicate:new List<Func<IFooterViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s => new ViewEventCommandParameter(
                         new object[] {ViewMessageConst.Instance.ViewPatientResponses},

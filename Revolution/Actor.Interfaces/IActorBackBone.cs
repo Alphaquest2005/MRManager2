@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using System.Reflection;
 using SystemInterfaces;
 using ViewModel.Interfaces;
 

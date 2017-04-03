@@ -1,4 +1,3 @@
-using System;
 using SystemInterfaces;
 
 namespace DomainMessages

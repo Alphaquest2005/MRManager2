@@ -6,7 +6,7 @@
 using Common.Dynamic;
 using SystemInterfaces;
 
-namespace EF.Entities
+namespace GenSoft.Entities
 {
 	public class EFEntity<T>: Expando where T: IEntity
 	{

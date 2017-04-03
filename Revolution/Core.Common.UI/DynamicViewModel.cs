@@ -8,11 +8,9 @@ using SystemInterfaces;
 using Common;
 using Common.Dynamic;
 using Reactive.Bindings;
-using ReactiveUI;
 using RevolutionEntities.Process;
 using Utilities;
 using ViewModel.Interfaces;
-using ViewModelInterfaces;
 
 namespace Core.Common.UI
 {
@@ -83,7 +81,7 @@ namespace Core.Common.UI
         public ISystemProcess Process { get; }
         public List<IViewModelEventSubscription<IViewModel, IEvent>> EventSubscriptions { get; }
         public List<IViewModelEventPublication<IViewModel, IEvent>> EventPublications { get; }
-        public Dictionary<string, ReactiveCommand<IViewModel, Unit>> Commands { get; }
+        public Dictionary<string, ReactiveCommand<IViewModel>> Commands { get; }
         public List<IViewModelEventCommand<IViewModel, IEvent>> CommandInfo { get; }
         public Type Orientation { get; }
         public Type ViewModelType { get; }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reactive;
 using System.Reactive.Linq;
 using SystemInterfaces;
-using ReactiveUI;
+using Reactive.Bindings;
 using RevolutionEntities.Process;
 using RevolutionEntities.ViewModels;
 using ViewMessages;
@@ -30,7 +30,7 @@ namespace RevolutionData
                 new ViewEventCommand<IHeaderViewModel, INavigateToView>(
                     key:"ViewHome",
                     commandPredicate:new List<Func<IHeaderViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s =>
                     {
@@ -44,7 +44,7 @@ namespace RevolutionData
                 new ViewEventCommand<IHeaderViewModel, INavigateToView>(
                     key:"ViewPatientInfo",
                     commandPredicate:new List<Func<IHeaderViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s =>
                     {
@@ -59,7 +59,7 @@ namespace RevolutionData
                 new ViewEventCommand<IHeaderViewModel, INavigateToView>(
                     key:"ViewPatientResponses",
                     commandPredicate:new List<Func<IHeaderViewModel, bool>>{},
-                    subject:s => Observable.Empty<ReactiveCommand<IViewModel, Unit>>(),
+                    subject:s => Observable.Empty<ReactiveCommand<IViewModel>>(),
 
                     messageData: s =>
                     {

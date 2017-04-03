@@ -1,23 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using SystemInterfaces;
 using Akka.Actor;
-using Akka.Event;
-using Akka.IO;
-using Akka.Routing;
-using CommonMessages;
-using EFRepository;
 using EventAggregator;
-using EventMessages;
 using EventMessages.Events;
 using RevolutionEntities.Process;
-using Utilities;
-using ViewMessages;
 
 namespace DataServices.Actors
 {

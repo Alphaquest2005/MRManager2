@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using SystemInterfaces;
-using FluentValidation;
+﻿using SystemInterfaces;
 using JB.Collections.Reactive;
 using Reactive.Bindings;
 using ViewModel.Interfaces;
