@@ -1,6 +1,6 @@
 --------------------------------------Insert Test Data --------------------------------------------------
 declare @AppName varchar(50)
-set @AppName = 'Amoeba'
+set @AppName = 'MRManager'
 
 declare @appId int
 set @appId = (select Id from AmoebaDB.dbo.Applications where Name = @AppName)

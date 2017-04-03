@@ -17,9 +17,6 @@ namespace EF.Entities
 
 		//-------------------Navigation Properties -------------------------------//
 			// ---------Child Relationships
-				public virtual ICollection<ForeignPhoneNumbers> ForeignPhoneNumbers {get; set;}
-				public virtual ICollection<OrganisationPhoneNumbers> OrganisationPhoneNumbers {get; set;}
-				public virtual ICollection<PersonPhoneNumbers> PersonPhoneNumbers {get; set;}
 		
 			// ---------Parent Relationships
 	

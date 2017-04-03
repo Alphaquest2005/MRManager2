@@ -19,7 +19,6 @@ namespace EF.Entities
 			// ---------Child Relationships
 		
 			// ---------Parent Relationships
-				public virtual ResponseSuggestions ResponseSuggestions {get; set;}
 	
 
 	}

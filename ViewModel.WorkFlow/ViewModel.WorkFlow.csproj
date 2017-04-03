@@ -48,16 +48,8 @@
     <Compile Include="ViewModelInfo\EntityViewCacheViewModelInfo.cs" />
     <Compile Include="ViewModelInfo\FooterViewModelInfo.cs" />
     <Compile Include="ViewModelInfo\HeaderViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\InterviewListViewModelInfo.cs" />
     <Compile Include="ViewModelInfo\MainWindowViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\PatientDetailsViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\PatientSummaryListViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\PatientSyntomsViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\PatientVisitViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\QuestionaireViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\QuestionListViewModelInfo.cs" />
     <Compile Include="ViewModelInfo\ScreenViewModelInfo.cs" />
-    <Compile Include="ViewModelInfo\SigninViewModelInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DomainMessages\DomainMessages.csproj">

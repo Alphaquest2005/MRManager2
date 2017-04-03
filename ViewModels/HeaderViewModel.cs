@@ -9,7 +9,7 @@ using Interfaces;
 using JB.Collections.Reactive;
 using Reactive.Bindings;
 using ReactiveUI;
-using ValidationSets;
+
 using ViewModel.Interfaces;
 using ViewModelInterfaces;
 

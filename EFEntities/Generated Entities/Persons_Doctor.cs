@@ -17,7 +17,6 @@ namespace EF.Entities
 
 		//-------------------Navigation Properties -------------------------------//
 			// ---------Child Relationships
-				public virtual ICollection<PatientDoctor> PatientDoctor {get; set;}
 				public virtual ICollection<PatientVisit> PatientVisit {get; set;}
 		
 			// ---------Parent Relationships

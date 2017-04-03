@@ -11,12 +11,12 @@ using SystemInterfaces;
 
 namespace Interfaces
 {
-	
+	[InheritedExport]
 	public partial interface IResponseOptions:IEntity  
 	{
-		int QuestionResponseTypeId { get;}
 		int QuestionId { get;}
 		string Description { get;}
+		int QuestionResponseTypeId { get;}
 		int ResponseNumber { get;}
 
 

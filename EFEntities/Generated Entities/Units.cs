@@ -19,12 +19,6 @@ namespace EF.Entities
 
 		//-------------------Navigation Properties -------------------------------//
 			// ---------Child Relationships
-				public virtual ICollection<BloodPressure> BloodPressure {get; set;}
-				public virtual ICollection<Height> Height {get; set;}
-				public virtual ICollection<Pulse> Pulse {get; set;}
-				public virtual ICollection<Respiration> Respiration {get; set;}
-				public virtual ICollection<Temperature> Temperature {get; set;}
-				public virtual ICollection<Weight> Weight {get; set;}
 		
 			// ---------Parent Relationships
 	

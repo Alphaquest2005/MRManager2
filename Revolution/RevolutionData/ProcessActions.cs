@@ -210,66 +210,7 @@ namespace RevolutionData
                 );
         }
 
-        public class SignIn
-        {
-            public static IProcessAction IntializeSigninProcessState => new ProcessAction(
-                action: async cp =>
-                {
-                    var ps = new ProcessState<ISignInInfo>(
-                        process: cp.Actor.Process,
-                        entity: NullEntity<ISignInInfo>.Instance,
-                        info: new StateInfo(cp.Actor.Process.Id,
-                            new State(name: "AwaitUserName", status: "Waiting for User Name",
-                                notes:
-                                    "Please Enter your User Name. If this is your First Time Login In please Contact the Receptionist for your user info.")));
-                    return await Task.Run(() => new UpdateProcessState<ISignInInfo>(ps,
-                        new StateCommandInfo(cp.Actor.Process.Id, Context.Process.Commands.UpdateState),
-                        cp.Actor.Process, cp.Actor.Source));
-
-                },
-                processInfo: cp => new StateCommandInfo(cp.Actor.Process.Id, Context.Process.Commands.CreateState),
-                // take shortcut cud be IntialState
-                expectedSourceType: new SourceType(typeof (IComplexEventService)));
-
-            public static IProcessAction UserNameFound => new ProcessAction(
-                action: async cp =>
-                {
-                    var ps = new ProcessState<ISignInInfo>(cp.Actor.Process, cp.Messages["UserNameFound"].Entity,
-                        new StateInfo(cp.Actor.Process.Id, "WelcomeUser",
-                            $"Welcome {cp.Messages["UserNameFound"].Entity.Usersignin}", "Please Enter your Password"));
-                    return await Task.Run(() => new UpdateProcessState<ISignInInfo>(ps,
-                        new StateCommandInfo(cp.Actor.Process.Id, Context.Process.Commands.UpdateState),
-                        cp.Actor.Process, cp.Actor.Source));
-                },
-                processInfo: cp => new StateCommandInfo(cp.Actor.Process.Id, Context.Process.Commands.UpdateState),
-                expectedSourceType: new SourceType(typeof (IComplexEventService))
-                );
-
-            public static IProcessAction SetProcessStatetoValidatedUser => new ProcessAction(
-                action: async cp =>
-                {
-                    var ps = new ProcessState<ISignInInfo>(cp.Actor.Process, cp.Messages["ValidatedUser"].Entity,
-                        new StateInfo(cp.Actor.Process.Id, "UserValidated",
-                            $"User: {cp.Messages["ValidatedUser"].Entity.Usersignin} Validated", "User Validated"));
-                    return await Task.Run(() => new UpdateProcessState<ISignInInfo>(ps,
-                        new StateCommandInfo(cp.Actor.Process.Id, Context.Process.Commands.UpdateState),
-                        cp.Actor.Process, cp.Actor.Source));
-                },
-                processInfo: cp => new StateCommandInfo(cp.Actor.Process.Id, Context.Process.Commands.UpdateState),
-                expectedSourceType: new SourceType(typeof (IComplexEventService)));
-
-
-            public static IProcessAction UserValidated => new ProcessAction(
-                action: async cp =>
-                         await Task.Run(() => new UserValidated(cp.Messages["ValidatedUser"].Entity,
-                            new StateEventInfo(cp.Actor.Process.Id, Context.Domain.Events.DomainEventPublished),
-                            cp.Actor.Process, cp.Actor.Source)),
-                processInfo: cp => new StateCommandInfo(cp.Actor.Process.Id, Context.Domain.Commands.PublishDomainEvent),
-                expectedSourceType: new SourceType(typeof (IComplexEventService))
-                );
-
-
-        }
+        
 
     }
 
@@ -290,7 +231,7 @@ namespace RevolutionData
                         expectedSourceType: new SourceType(typeof (IComplexEventService)))
 
                 },
-                expectedMessageType: typeof(IProcessStateMessage<IInterviewInfo>),
+                expectedMessageType: typeof(IProcessStateMessage<TEntity>),
                 action: IntializeCacheAction,
                 processInfo: new StateCommandInfo(processId, Context.Process.Commands.CreateState));
         }
@@ -328,7 +269,7 @@ namespace RevolutionData
                             expectedSourceType: new SourceType(typeof (IComplexEventService)))
 
                 },
-                expectedMessageType: typeof(IProcessStateMessage<IInterviewInfo>),
+                expectedMessageType: typeof(IProcessStateMessage<TView>),
                 action: IntializeCacheAction,
                 processInfo: new StateCommandInfo(processId, Context.Process.Commands.CreateState));
         }

@@ -152,10 +152,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DataLayer\DataEntities\EF\DefaultEFEntityTemplate.ttinclude" />
-    <None Include="DataLayer\DataEntities\EF\AutoEntityViewTemplate.ttinclude" />
     <None Include="DataLayer\DataEntities\EF\EntityViewTemplate.ttinclude" />
     <None Include="DataLayer\DBContext\EF\DBContextIntitalizationTemplate.ttinclude" />
-    <None Include="DataLayer\Interfaces\AutoEntityViewInterfacesTemplate.ttinclude" />
     <None Include="DataLayer\Interfaces\Interfaces.ttinclude" />
     <None Include="DataLayer\Interfaces\EntityViewInterfacesTemplate.ttinclude" />
     <None Include="DataLayer\Interfaces\InterfacesTemplate.ttinclude" />

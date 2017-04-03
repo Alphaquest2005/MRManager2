@@ -13,18 +13,16 @@ namespace EF.Entities
 {
 	public partial class ResponseOptions: BaseEntity, IResponseOptions
 	{
-		public virtual int QuestionResponseTypeId { get; set; }
 		public virtual int QuestionId { get; set; }
 		public virtual string Description { get; set; }
+		public virtual int QuestionResponseTypeId { get; set; }
 		public virtual int ResponseNumber { get; set; }
 
 		//-------------------Navigation Properties -------------------------------//
 			// ---------Child Relationships
 				public virtual ICollection<Response> Response {get; set;}
-				public virtual ResponseSuggestions ResponseSuggestions {get; set;}
 		
 			// ---------Parent Relationships
-				public virtual QuestionResponseTypes QuestionResponseTypes {get; set;}
 				public virtual Questions Questions {get; set;}
 	
 

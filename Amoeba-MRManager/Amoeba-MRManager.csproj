@@ -364,614 +364,130 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MRManger-DataEntities.cs</LastGenOutput>
       <LastOutputs>
-..\EF.Mappings\Generated Mappings\AddressCities.cs
-..\EF.Mappings\Generated Mappings\AddressCountries.cs
-..\EF.Mappings\Generated Mappings\Addresses.cs
-..\EF.Mappings\Generated Mappings\AddressLines.cs
-..\EF.Mappings\Generated Mappings\AddressParishes.cs
-..\EF.Mappings\Generated Mappings\AddressStates.cs
-..\EF.Mappings\Generated Mappings\AddressTypes.cs
-..\EF.Mappings\Generated Mappings\AddressZipCodes.cs
 ..\EF.Mappings\Generated Mappings\Allergies.cs
 ..\EF.Mappings\Generated Mappings\ApplicationSetting.cs
-..\EF.Mappings\Generated Mappings\AssignedDating.cs
-..\EF.Mappings\Generated Mappings\BloodPressure.cs
-..\EF.Mappings\Generated Mappings\BoatInfo.cs
-..\EF.Mappings\Generated Mappings\CarePlan.cs
-..\EF.Mappings\Generated Mappings\CarePlanDetails.cs
-..\EF.Mappings\Generated Mappings\CarePlanDetailsSuggestedMedication.cs
 ..\EF.Mappings\Generated Mappings\Cities.cs
-..\EF.Mappings\Generated Mappings\Components.cs
 ..\EF.Mappings\Generated Mappings\Countries.cs
 ..\EF.Mappings\Generated Mappings\DefaultImages.cs
 ..\EF.Mappings\Generated Mappings\EntityAttributes.cs
-..\EF.Mappings\Generated Mappings\ExamDetailComponents.cs
-..\EF.Mappings\Generated Mappings\ExamDetails.cs
-..\EF.Mappings\Generated Mappings\ExamResults.cs
-..\EF.Mappings\Generated Mappings\ExamResults_AnioticFluid.cs
-..\EF.Mappings\Generated Mappings\ExamResults_FetalDates.cs
-..\EF.Mappings\Generated Mappings\ExamResults_SimpleValues.cs
-..\EF.Mappings\Generated Mappings\ExamResults_UmbilicalArtery.cs
-..\EF.Mappings\Generated Mappings\Exams.cs
-..\EF.Mappings\Generated Mappings\ExamTypes.cs
-..\EF.Mappings\Generated Mappings\ForeignAddresses.cs
-..\EF.Mappings\Generated Mappings\ForeignPhoneNumbers.cs
-..\EF.Mappings\Generated Mappings\Height.cs
 ..\EF.Mappings\Generated Mappings\Interviews.cs
 ..\EF.Mappings\Generated Mappings\MaritalStatus.cs
-..\EF.Mappings\Generated Mappings\MarketingMedium.cs
 ..\EF.Mappings\Generated Mappings\Media.cs
 ..\EF.Mappings\Generated Mappings\MediaTypes.cs
 ..\EF.Mappings\Generated Mappings\MedicalCategory.cs
 ..\EF.Mappings\Generated Mappings\MedicalSystemInterviews.cs
 ..\EF.Mappings\Generated Mappings\MedicalSystems.cs
-..\EF.Mappings\Generated Mappings\NonResidentCompanyInfo.cs
-..\EF.Mappings\Generated Mappings\NonResidentHotelInfo.cs
 ..\EF.Mappings\Generated Mappings\Occupations.cs
-..\EF.Mappings\Generated Mappings\OrganisationAddress.cs
-..\EF.Mappings\Generated Mappings\OrganisationPhoneNumbers.cs
 ..\EF.Mappings\Generated Mappings\Organisations.cs
-..\EF.Mappings\Generated Mappings\Organisations_Companys.cs
-..\EF.Mappings\Generated Mappings\Organisations_Hotels.cs
-..\EF.Mappings\Generated Mappings\ParishCities.cs
 ..\EF.Mappings\Generated Mappings\Parishes.cs
-..\EF.Mappings\Generated Mappings\PatientAllergies.cs
-..\EF.Mappings\Generated Mappings\PatientDoctor.cs
-..\EF.Mappings\Generated Mappings\PatientReligon.cs
 ..\EF.Mappings\Generated Mappings\PatientResponses.cs
-..\EF.Mappings\Generated Mappings\PatientResults.cs
 ..\EF.Mappings\Generated Mappings\Patients.cs
 ..\EF.Mappings\Generated Mappings\PatientSyntoms.cs
 ..\EF.Mappings\Generated Mappings\PatientVisit.cs
-..\EF.Mappings\Generated Mappings\PatientVisitVitalSigns.cs
-..\EF.Mappings\Generated Mappings\PersonAddresses.cs
-..\EF.Mappings\Generated Mappings\PersonCountryOfResidence.cs
-..\EF.Mappings\Generated Mappings\PersonEmailAddress.cs
-..\EF.Mappings\Generated Mappings\PersonJob.cs
-..\EF.Mappings\Generated Mappings\PersonMaritalStatus.cs
 ..\EF.Mappings\Generated Mappings\PersonMedia.cs
-..\EF.Mappings\Generated Mappings\PersonNames.cs
-..\EF.Mappings\Generated Mappings\PersonPhoneNumbers.cs
 ..\EF.Mappings\Generated Mappings\Persons.cs
-..\EF.Mappings\Generated Mappings\Persons_ArrivalDepartureInfo.cs
 ..\EF.Mappings\Generated Mappings\Persons_Doctor.cs
-..\EF.Mappings\Generated Mappings\Persons_EmergencyContact.cs
-..\EF.Mappings\Generated Mappings\Persons_NextOfKin.cs
-..\EF.Mappings\Generated Mappings\Persons_NonResidentPatient.cs
-..\EF.Mappings\Generated Mappings\Persons_Nurses.cs
-..\EF.Mappings\Generated Mappings\Persons_Patient.cs
 ..\EF.Mappings\Generated Mappings\Phase.cs
 ..\EF.Mappings\Generated Mappings\PhoneTypes.cs
-..\EF.Mappings\Generated Mappings\PrimaryPersonAddress.cs
-..\EF.Mappings\Generated Mappings\PrimaryPersonPhoneNumber.cs
-..\EF.Mappings\Generated Mappings\Pulse.cs
-..\EF.Mappings\Generated Mappings\QuestionResponseTypes.cs
 ..\EF.Mappings\Generated Mappings\Questions.cs
-..\EF.Mappings\Generated Mappings\Religons.cs
-..\EF.Mappings\Generated Mappings\Respiration.cs
 ..\EF.Mappings\Generated Mappings\Response.cs
 ..\EF.Mappings\Generated Mappings\ResponseImages.cs
 ..\EF.Mappings\Generated Mappings\ResponseOptions.cs
-..\EF.Mappings\Generated Mappings\ResponseSuggestions.cs
-..\EF.Mappings\Generated Mappings\ResponseSuggestions_CarePlans.cs
 ..\EF.Mappings\Generated Mappings\ResponseSuggestions_Interviews.cs
-..\EF.Mappings\Generated Mappings\ResultFieldNames.cs
 ..\EF.Mappings\Generated Mappings\Sex.cs
 ..\EF.Mappings\Generated Mappings\States.cs
-..\EF.Mappings\Generated Mappings\StudentInfo.cs
 ..\EF.Mappings\Generated Mappings\SyntomMedicalSystems.cs
 ..\EF.Mappings\Generated Mappings\SyntomPriority.cs
 ..\EF.Mappings\Generated Mappings\Syntoms.cs
 ..\EF.Mappings\Generated Mappings\SyntomStatus.cs
-..\EF.Mappings\Generated Mappings\Temperature.cs
-..\EF.Mappings\Generated Mappings\UltraSoundGeneralEvaluation.cs
 ..\EF.Mappings\Generated Mappings\Units.cs
 ..\EF.Mappings\Generated Mappings\UserSignIn.cs
 ..\EF.Mappings\Generated Mappings\VisitType.cs
-..\EF.Mappings\Generated Mappings\VitalSigns.cs
-..\EF.Mappings\Generated Mappings\Weight.cs
-..\EF.Mappings\Generated Mappings\ZipCodes.cs
 ..\EFEntities\EFEntity.cs
-..\EFEntities\Generated Entities\AddressCities.cs
-..\EFEntities\Generated Entities\AddressCountries.cs
-..\EFEntities\Generated Entities\Addresses.cs
-..\EFEntities\Generated Entities\AddressLines.cs
-..\EFEntities\Generated Entities\AddressParishes.cs
-..\EFEntities\Generated Entities\AddressStates.cs
-..\EFEntities\Generated Entities\AddressTypes.cs
-..\EFEntities\Generated Entities\AddressZipCodes.cs
 ..\EFEntities\Generated Entities\Allergies.cs
 ..\EFEntities\Generated Entities\ApplicationSetting.cs
-..\EFEntities\Generated Entities\AssignedDating.cs
-..\EFEntities\Generated Entities\BloodPressure.cs
-..\EFEntities\Generated Entities\BoatInfo.cs
-..\EFEntities\Generated Entities\CarePlan.cs
-..\EFEntities\Generated Entities\CarePlanDetails.cs
-..\EFEntities\Generated Entities\CarePlanDetailsSuggestedMedication.cs
 ..\EFEntities\Generated Entities\Cities.cs
-..\EFEntities\Generated Entities\Components.cs
 ..\EFEntities\Generated Entities\Countries.cs
 ..\EFEntities\Generated Entities\DefaultImages.cs
-..\EFEntities\Generated Entities\Entity Views\AddressInfo.cs
-..\EFEntities\Generated Entities\Entity Views\AddressLineInfo.cs
-..\EFEntities\Generated Entities\Entity Views\AllergiesInfo.cs
-..\EFEntities\Generated Entities\Entity Views\BloodPressureInfo.cs
-..\EFEntities\Generated Entities\Entity Views\CountryInfo.cs
-..\EFEntities\Generated Entities\Entity Views\ForeignAddressInfo.cs
-..\EFEntities\Generated Entities\Entity Views\ForeignPhoneNumberInfo.cs
-..\EFEntities\Generated Entities\Entity Views\HeightInfo.cs
-..\EFEntities\Generated Entities\Entity Views\InterviewInfo.cs
-..\EFEntities\Generated Entities\Entity Views\InterviewReponses.cs
-..\EFEntities\Generated Entities\Entity Views\NonResidentPatientInfo.cs
-..\EFEntities\Generated Entities\Entity Views\ParishInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PatientAddressInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PatientCountryOfResidence.cs
-..\EFEntities\Generated Entities\Entity Views\PatientInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PatientJobInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PatientPhoneNumbers.cs
-..\EFEntities\Generated Entities\Entity Views\PatientResponseInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PatientSummaryInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PatientSyntomsInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PersonAddressInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PersonInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PersonMaritalStatusInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PersonNameInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PersonPhoneNumberInfo.cs
-..\EFEntities\Generated Entities\Entity Views\PulseInfo.cs
-..\EFEntities\Generated Entities\Entity Views\QuestionInfo.cs
-..\EFEntities\Generated Entities\Entity Views\RespirationInfo.cs
-..\EFEntities\Generated Entities\Entity Views\SignInInfo.cs
-..\EFEntities\Generated Entities\Entity Views\TemperatureInfo.cs
-..\EFEntities\Generated Entities\Entity Views\VitalsHistoryInfo.cs
-..\EFEntities\Generated Entities\Entity Views\VitalSignsInfo.cs
-..\EFEntities\Generated Entities\Entity Views\WeightInfo.cs
 ..\EFEntities\Generated Entities\EntityAttributes.cs
-..\EFEntities\Generated Entities\ExamDetailComponents.cs
-..\EFEntities\Generated Entities\ExamDetails.cs
-..\EFEntities\Generated Entities\ExamResults.cs
-..\EFEntities\Generated Entities\ExamResults_AnioticFluid.cs
-..\EFEntities\Generated Entities\ExamResults_FetalDates.cs
-..\EFEntities\Generated Entities\ExamResults_SimpleValues.cs
-..\EFEntities\Generated Entities\ExamResults_UmbilicalArtery.cs
-..\EFEntities\Generated Entities\Exams.cs
-..\EFEntities\Generated Entities\ExamTypes.cs
-..\EFEntities\Generated Entities\ForeignAddresses.cs
-..\EFEntities\Generated Entities\ForeignPhoneNumbers.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressCitiesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressCountriesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressLinesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressParishesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressStatesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressTypesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AddressZipCodesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AllergiesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ApplicationSettingAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\AssignedDatingAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\BloodPressureAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\BoatInfoAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\CarePlanAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\CarePlanDetailsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\CarePlanDetailsSuggestedMedicationAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\CitiesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ComponentsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\CountriesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\DefaultImagesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\EntityAttributesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamDetailComponentsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamDetailsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamResults_AnioticFluidAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamResults_FetalDatesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamResults_SimpleValuesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamResults_UmbilicalArteryAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamResultsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ExamTypesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ForeignAddressesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ForeignPhoneNumbersAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\HeightAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\InterviewsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\MaritalStatusAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\MarketingMediumAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\MediaAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\MediaTypesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\MedicalCategoryAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\MedicalSystemInterviewsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\MedicalSystemsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\NonResidentCompanyInfoAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\NonResidentHotelInfoAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\OccupationsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\OrganisationAddressAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\OrganisationPhoneNumbersAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Organisations_CompanysAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Organisations_HotelsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\OrganisationsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ParishCitiesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ParishesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientAllergiesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientDoctorAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientReligonAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientResponsesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientResultsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientSyntomsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientVisitAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PatientVisitVitalSignsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonAddressesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonCountryOfResidenceAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonEmailAddressAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonJobAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonMaritalStatusAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonMediaAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonNamesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonPhoneNumbersAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Persons_ArrivalDepartureInfoAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Persons_DoctorAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Persons_EmergencyContactAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Persons_NextOfKinAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Persons_NonResidentPatientAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Persons_NursesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\Persons_PatientAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PersonsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PhaseAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PhoneTypesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PrimaryPersonAddressAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PrimaryPersonPhoneNumberAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\PulseAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\QuestionResponseTypesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\QuestionsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ReligonsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\RespirationAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ResponseAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ResponseImagesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ResponseOptionsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ResponseSuggestions_CarePlansAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ResponseSuggestions_InterviewsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ResponseSuggestionsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ResultFieldNamesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\SexAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\StatesAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\StudentInfoAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\SyntomMedicalSystemsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\SyntomPriorityAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\SyntomsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\SyntomStatusAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\TemperatureAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\UltraSoundGeneralEvaluationAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\UnitsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\UserSignInAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\VisitTypeAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\VitalSignsAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\WeightAutoView.cs
-..\EFEntities\Generated Entities\Generated AutoView Templates\ZipCodesAutoView.cs
-..\EFEntities\Generated Entities\Height.cs
 ..\EFEntities\Generated Entities\Interviews.cs
 ..\EFEntities\Generated Entities\MaritalStatus.cs
-..\EFEntities\Generated Entities\MarketingMedium.cs
 ..\EFEntities\Generated Entities\Media.cs
 ..\EFEntities\Generated Entities\MediaTypes.cs
 ..\EFEntities\Generated Entities\MedicalCategory.cs
 ..\EFEntities\Generated Entities\MedicalSystemInterviews.cs
 ..\EFEntities\Generated Entities\MedicalSystems.cs
-..\EFEntities\Generated Entities\NonResidentCompanyInfo.cs
-..\EFEntities\Generated Entities\NonResidentHotelInfo.cs
 ..\EFEntities\Generated Entities\Occupations.cs
-..\EFEntities\Generated Entities\OrganisationAddress.cs
-..\EFEntities\Generated Entities\OrganisationPhoneNumbers.cs
 ..\EFEntities\Generated Entities\Organisations.cs
-..\EFEntities\Generated Entities\Organisations_Companys.cs
-..\EFEntities\Generated Entities\Organisations_Hotels.cs
-..\EFEntities\Generated Entities\ParishCities.cs
 ..\EFEntities\Generated Entities\Parishes.cs
-..\EFEntities\Generated Entities\PatientAllergies.cs
-..\EFEntities\Generated Entities\PatientDoctor.cs
-..\EFEntities\Generated Entities\PatientReligon.cs
 ..\EFEntities\Generated Entities\PatientResponses.cs
-..\EFEntities\Generated Entities\PatientResults.cs
 ..\EFEntities\Generated Entities\Patients.cs
 ..\EFEntities\Generated Entities\PatientSyntoms.cs
 ..\EFEntities\Generated Entities\PatientVisit.cs
-..\EFEntities\Generated Entities\PatientVisitVitalSigns.cs
-..\EFEntities\Generated Entities\PersonAddresses.cs
-..\EFEntities\Generated Entities\PersonCountryOfResidence.cs
-..\EFEntities\Generated Entities\PersonEmailAddress.cs
-..\EFEntities\Generated Entities\PersonJob.cs
-..\EFEntities\Generated Entities\PersonMaritalStatus.cs
 ..\EFEntities\Generated Entities\PersonMedia.cs
-..\EFEntities\Generated Entities\PersonNames.cs
-..\EFEntities\Generated Entities\PersonPhoneNumbers.cs
 ..\EFEntities\Generated Entities\Persons.cs
-..\EFEntities\Generated Entities\Persons_ArrivalDepartureInfo.cs
 ..\EFEntities\Generated Entities\Persons_Doctor.cs
-..\EFEntities\Generated Entities\Persons_EmergencyContact.cs
-..\EFEntities\Generated Entities\Persons_NextOfKin.cs
-..\EFEntities\Generated Entities\Persons_NonResidentPatient.cs
-..\EFEntities\Generated Entities\Persons_Nurses.cs
-..\EFEntities\Generated Entities\Persons_Patient.cs
 ..\EFEntities\Generated Entities\Phase.cs
 ..\EFEntities\Generated Entities\PhoneTypes.cs
-..\EFEntities\Generated Entities\PrimaryPersonAddress.cs
-..\EFEntities\Generated Entities\PrimaryPersonPhoneNumber.cs
-..\EFEntities\Generated Entities\Pulse.cs
-..\EFEntities\Generated Entities\QuestionResponseTypes.cs
 ..\EFEntities\Generated Entities\Questions.cs
-..\EFEntities\Generated Entities\Religons.cs
-..\EFEntities\Generated Entities\Respiration.cs
 ..\EFEntities\Generated Entities\Response.cs
 ..\EFEntities\Generated Entities\ResponseImages.cs
 ..\EFEntities\Generated Entities\ResponseOptions.cs
-..\EFEntities\Generated Entities\ResponseSuggestions.cs
-..\EFEntities\Generated Entities\ResponseSuggestions_CarePlans.cs
 ..\EFEntities\Generated Entities\ResponseSuggestions_Interviews.cs
-..\EFEntities\Generated Entities\ResultFieldNames.cs
 ..\EFEntities\Generated Entities\Sex.cs
 ..\EFEntities\Generated Entities\States.cs
-..\EFEntities\Generated Entities\StudentInfo.cs
 ..\EFEntities\Generated Entities\SyntomMedicalSystems.cs
 ..\EFEntities\Generated Entities\SyntomPriority.cs
 ..\EFEntities\Generated Entities\Syntoms.cs
 ..\EFEntities\Generated Entities\SyntomStatus.cs
-..\EFEntities\Generated Entities\Temperature.cs
-..\EFEntities\Generated Entities\UltraSoundGeneralEvaluation.cs
 ..\EFEntities\Generated Entities\Units.cs
 ..\EFEntities\Generated Entities\UserSignIn.cs
 ..\EFEntities\Generated Entities\VisitType.cs
-..\EFEntities\Generated Entities\VitalSigns.cs
-..\EFEntities\Generated Entities\Weight.cs
-..\EFEntities\Generated Entities\ZipCodes.cs
 </LastOutputs>
     </Content>
     <Content Include="MRManger-Interfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MRManger-Interfaces.cs</LastGenOutput>
       <LastOutputs>
-..\Interfaces\Generated Interfaces\AddressCities.cs
-..\Interfaces\Generated Interfaces\AddressCountries.cs
-..\Interfaces\Generated Interfaces\Addresses.cs
-..\Interfaces\Generated Interfaces\AddressLines.cs
-..\Interfaces\Generated Interfaces\AddressParishes.cs
-..\Interfaces\Generated Interfaces\AddressStates.cs
-..\Interfaces\Generated Interfaces\AddressTypes.cs
-..\Interfaces\Generated Interfaces\AddressZipCodes.cs
 ..\Interfaces\Generated Interfaces\Allergies.cs
 ..\Interfaces\Generated Interfaces\ApplicationSetting.cs
-..\Interfaces\Generated Interfaces\AssignedDating.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AddressCities.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AddressCountries.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Addresses.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AddressLines.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AddressParishes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AddressStates.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AddressTypes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AddressZipCodes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Allergies.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ApplicationSetting.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\AssignedDating.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\BloodPressure.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\BoatInfo.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\CarePlan.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\CarePlanDetails.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\CarePlanDetailsSuggestedMedication.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Cities.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Components.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Countries.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\DefaultImages.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\EntityAttributes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamDetailComponents.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamDetails.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamResults.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamResults_AnioticFluid.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamResults_FetalDates.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamResults_SimpleValues.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamResults_UmbilicalArtery.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Exams.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ExamTypes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ForeignAddresses.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ForeignPhoneNumbers.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Height.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Interviews.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\MaritalStatus.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\MarketingMedium.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Media.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\MediaTypes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\MedicalCategory.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\MedicalSystemInterviews.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\MedicalSystems.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\NonResidentCompanyInfo.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\NonResidentHotelInfo.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Occupations.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\OrganisationAddress.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\OrganisationPhoneNumbers.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Organisations.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Organisations_Companys.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Organisations_Hotels.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ParishCities.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Parishes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientAllergies.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientDoctor.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientReligon.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientResponses.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientResults.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Patients.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientSyntoms.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientVisit.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PatientVisitVitalSigns.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonAddresses.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonCountryOfResidence.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonEmailAddress.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonJob.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonMaritalStatus.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonMedia.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonNames.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PersonPhoneNumbers.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons_ArrivalDepartureInfo.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons_Doctor.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons_EmergencyContact.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons_NextOfKin.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons_NonResidentPatient.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons_Nurses.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Persons_Patient.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Phase.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PhoneTypes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PrimaryPersonAddress.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\PrimaryPersonPhoneNumber.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Pulse.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\QuestionResponseTypes.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Questions.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Religons.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Respiration.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Response.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ResponseImages.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ResponseOptions.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ResponseSuggestions.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ResponseSuggestions_CarePlans.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ResponseSuggestions_Interviews.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ResultFieldNames.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Sex.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\States.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\StudentInfo.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\SyntomMedicalSystems.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\SyntomPriority.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Syntoms.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\SyntomStatus.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Temperature.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\UltraSoundGeneralEvaluation.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Units.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\UserSignIn.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\VisitType.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\VitalSigns.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\Weight.cs
-..\Interfaces\Generated Interfaces\AutoEntityViews\ZipCodes.cs
-..\Interfaces\Generated Interfaces\BloodPressure.cs
-..\Interfaces\Generated Interfaces\BoatInfo.cs
-..\Interfaces\Generated Interfaces\CarePlan.cs
-..\Interfaces\Generated Interfaces\CarePlanDetails.cs
-..\Interfaces\Generated Interfaces\CarePlanDetailsSuggestedMedication.cs
 ..\Interfaces\Generated Interfaces\Cities.cs
-..\Interfaces\Generated Interfaces\Components.cs
 ..\Interfaces\Generated Interfaces\Countries.cs
 ..\Interfaces\Generated Interfaces\DefaultImages.cs
 ..\Interfaces\Generated Interfaces\EntityAttributes.cs
-..\Interfaces\Generated Interfaces\EntityViews\AddressInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\AddressLineInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\AllergiesInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\BloodPressureInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\CountryInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\ForeignAddressInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\ForeignPhoneNumberInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\HeightInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\InterviewInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\InterviewReponses.cs
-..\Interfaces\Generated Interfaces\EntityViews\NonResidentPatientInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\ParishInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientAddressInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientCountryOfResidence.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientJobInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientPhoneNumbers.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientResponseInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientSummaryInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PatientSyntomsInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PersonAddressInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PersonInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PersonMaritalStatusInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PersonNameInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PersonPhoneNumberInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\PulseInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\QuestionInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\RespirationInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\SignInInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\TemperatureInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\VitalsHistoryInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\VitalSignsInfo.cs
-..\Interfaces\Generated Interfaces\EntityViews\WeightInfo.cs
-..\Interfaces\Generated Interfaces\ExamDetailComponents.cs
-..\Interfaces\Generated Interfaces\ExamDetails.cs
-..\Interfaces\Generated Interfaces\ExamResults.cs
-..\Interfaces\Generated Interfaces\ExamResults_AnioticFluid.cs
-..\Interfaces\Generated Interfaces\ExamResults_FetalDates.cs
-..\Interfaces\Generated Interfaces\ExamResults_SimpleValues.cs
-..\Interfaces\Generated Interfaces\ExamResults_UmbilicalArtery.cs
-..\Interfaces\Generated Interfaces\Exams.cs
-..\Interfaces\Generated Interfaces\ExamTypes.cs
-..\Interfaces\Generated Interfaces\ForeignAddresses.cs
-..\Interfaces\Generated Interfaces\ForeignPhoneNumbers.cs
-..\Interfaces\Generated Interfaces\Height.cs
 ..\Interfaces\Generated Interfaces\Interviews.cs
 ..\Interfaces\Generated Interfaces\MaritalStatus.cs
-..\Interfaces\Generated Interfaces\MarketingMedium.cs
 ..\Interfaces\Generated Interfaces\Media.cs
 ..\Interfaces\Generated Interfaces\MediaTypes.cs
 ..\Interfaces\Generated Interfaces\MedicalCategory.cs
 ..\Interfaces\Generated Interfaces\MedicalSystemInterviews.cs
 ..\Interfaces\Generated Interfaces\MedicalSystems.cs
-..\Interfaces\Generated Interfaces\NonResidentCompanyInfo.cs
-..\Interfaces\Generated Interfaces\NonResidentHotelInfo.cs
 ..\Interfaces\Generated Interfaces\Occupations.cs
-..\Interfaces\Generated Interfaces\OrganisationAddress.cs
-..\Interfaces\Generated Interfaces\OrganisationPhoneNumbers.cs
 ..\Interfaces\Generated Interfaces\Organisations.cs
-..\Interfaces\Generated Interfaces\Organisations_Companys.cs
-..\Interfaces\Generated Interfaces\Organisations_Hotels.cs
-..\Interfaces\Generated Interfaces\ParishCities.cs
 ..\Interfaces\Generated Interfaces\Parishes.cs
-..\Interfaces\Generated Interfaces\PatientAllergies.cs
-..\Interfaces\Generated Interfaces\PatientDoctor.cs
-..\Interfaces\Generated Interfaces\PatientReligon.cs
 ..\Interfaces\Generated Interfaces\PatientResponses.cs
-..\Interfaces\Generated Interfaces\PatientResults.cs
 ..\Interfaces\Generated Interfaces\Patients.cs
 ..\Interfaces\Generated Interfaces\PatientSyntoms.cs
 ..\Interfaces\Generated Interfaces\PatientVisit.cs
-..\Interfaces\Generated Interfaces\PatientVisitVitalSigns.cs
-..\Interfaces\Generated Interfaces\PersonAddresses.cs
-..\Interfaces\Generated Interfaces\PersonCountryOfResidence.cs
-..\Interfaces\Generated Interfaces\PersonEmailAddress.cs
-..\Interfaces\Generated Interfaces\PersonJob.cs
-..\Interfaces\Generated Interfaces\PersonMaritalStatus.cs
 ..\Interfaces\Generated Interfaces\PersonMedia.cs
-..\Interfaces\Generated Interfaces\PersonNames.cs
-..\Interfaces\Generated Interfaces\PersonPhoneNumbers.cs
 ..\Interfaces\Generated Interfaces\Persons.cs
-..\Interfaces\Generated Interfaces\Persons_ArrivalDepartureInfo.cs
 ..\Interfaces\Generated Interfaces\Persons_Doctor.cs
-..\Interfaces\Generated Interfaces\Persons_EmergencyContact.cs
-..\Interfaces\Generated Interfaces\Persons_NextOfKin.cs
-..\Interfaces\Generated Interfaces\Persons_NonResidentPatient.cs
-..\Interfaces\Generated Interfaces\Persons_Nurses.cs
-..\Interfaces\Generated Interfaces\Persons_Patient.cs
 ..\Interfaces\Generated Interfaces\Phase.cs
 ..\Interfaces\Generated Interfaces\PhoneTypes.cs
-..\Interfaces\Generated Interfaces\PrimaryPersonAddress.cs
-..\Interfaces\Generated Interfaces\PrimaryPersonPhoneNumber.cs
-..\Interfaces\Generated Interfaces\Pulse.cs
-..\Interfaces\Generated Interfaces\QuestionResponseTypes.cs
 ..\Interfaces\Generated Interfaces\Questions.cs
-..\Interfaces\Generated Interfaces\Religons.cs
-..\Interfaces\Generated Interfaces\Respiration.cs
 ..\Interfaces\Generated Interfaces\Response.cs
 ..\Interfaces\Generated Interfaces\ResponseImages.cs
 ..\Interfaces\Generated Interfaces\ResponseOptions.cs
-..\Interfaces\Generated Interfaces\ResponseSuggestions.cs
-..\Interfaces\Generated Interfaces\ResponseSuggestions_CarePlans.cs
 ..\Interfaces\Generated Interfaces\ResponseSuggestions_Interviews.cs
-..\Interfaces\Generated Interfaces\ResultFieldNames.cs
 ..\Interfaces\Generated Interfaces\Sex.cs
 ..\Interfaces\Generated Interfaces\States.cs
-..\Interfaces\Generated Interfaces\StudentInfo.cs
 ..\Interfaces\Generated Interfaces\SyntomMedicalSystems.cs
 ..\Interfaces\Generated Interfaces\SyntomPriority.cs
 ..\Interfaces\Generated Interfaces\Syntoms.cs
 ..\Interfaces\Generated Interfaces\SyntomStatus.cs
-..\Interfaces\Generated Interfaces\Temperature.cs
-..\Interfaces\Generated Interfaces\UltraSoundGeneralEvaluation.cs
 ..\Interfaces\Generated Interfaces\Units.cs
 ..\Interfaces\Generated Interfaces\UserSignIn.cs
 ..\Interfaces\Generated Interfaces\VisitType.cs
-..\Interfaces\Generated Interfaces\VitalSigns.cs
-..\Interfaces\Generated Interfaces\Weight.cs
-..\Interfaces\Generated Interfaces\ZipCodes.cs
 </LastOutputs>
     </Content>
     <Content Include="MRManger-DataTemplates.tt">

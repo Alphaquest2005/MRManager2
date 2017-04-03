@@ -4,7 +4,6 @@
 <#@ include file="..\..\..\Utilities\DataAccess\Repository.ttinclude" once="true" #>
 <#@ include file="EFEntityTemplate.ttinclude" #>
 <#@ include file="EntityViewTemplate.ttinclude" #>
-<#@ include file="AutoEntityViewTemplate.ttinclude" #>
 <#@ include file="DefaultEFEntityTemplate.ttinclude" #>
 <#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
@@ -23,10 +22,6 @@
 			tpl.Output.File = settings["Folder"] + @"\" + entity.Entity.Name + ".cs";
 			tpl.Render(); 
 
-			var atpl = new AutoEntityViewEntityTemplate(entity.Entity);
-			atpl.Output.Project = Path.Combine(appFolder, settings["Project"]) ;
-			atpl.Output.File = settings["Folder"] + @"\Generated AutoView Templates" + @"\" + entity.Entity.Name + "AutoView.cs";
-			atpl.Render(); 
 		}
 
 		foreach (var entityView in entities.SelectMany(x=> x.Entity.EntityViews))

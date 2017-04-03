@@ -1,6 +1,6 @@
 
 declare @AppName varchar(50)
-set @AppName = 'Amoeba'
+set @AppName = 'MRManager'
 
 declare @appId int
 set @appId = (select Id from AmoebaDB.dbo.Applications where Name = @AppName)
@@ -27,7 +27,7 @@ INSERT INTO AmoebaDB.dbo.Entities
                          (Name, EntitySetName, schemaname)
 SELECT    TABLE_NAME, TABLE_NAME AS Expr1, TABLE_SCHEMA --top 60
 FROM            INFORMATION_SCHEMA.TABLES
-WHERE        (TABLE_Type = N'BASE TABLE' and TABLE_NAME not in ('ApplicationSettings', 'sysdiagrams', '__EFMigrationsHistory'))
+WHERE        (TABLE_Type = N'BASE TABLE' and TABLE_NAME not in ('ApplicationSettings', 'sysdiagrams', '__EFMigrationsHistory','MSreplication_options','spt_fallback_db','spt_fallback_dev','spt_fallback_usg','spt_monitor'))
 order by TABLE_NAME
 
 
@@ -290,22 +290,23 @@ FROM            (SELECT        TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TY
                          AmoebaDB.dbo.EntityViewsInfo ON views.[View] = AmoebaDB.dbo.EntityViewsInfo.EntityViewName INNER JOIN
                              (SELECT        [View], ViewProperty, EntityViewPropertyId
                                FROM            AmoebaDB.dbo.EntityViewPropertiesInfo) AS ExistingEVProperties ON views.[Table] = ExistingEVProperties.[View] AND views.[Column] = ExistingEVProperties.ViewProperty
-WHERE        (source.TABLE_TYPE = 'View') AND (AmoebaDB.dbo.EntityViewsInfo.ApplicationId = 2)) as V
+WHERE        (source.TABLE_TYPE = 'View') AND (AmoebaDB.dbo.EntityViewsInfo.ApplicationId = @appId)) as V
 
------------------------------------------------insert into entity view view property
+---------------------------------------------insert into entity view view property
 insert into AmoebaDB.dbo.EntityViewViewProperties
 	(Id, EntityViewPropertyId)
 SELECT        AmoebaDB.dbo.EntityViewProperties.Id, V.providingEntityViewPropertyId
 FROM            (SELECT DISTINCT 
-                                                    views.[View], views.[Table], views.[Column], AmoebaDB.dbo.EntityViewsInfo.EntityViewId AS RequestingEntityViewId, 
-                                                    ExistingEVProperties.EntityViewPropertyId AS providingEntityViewPropertyId
-                          FROM            (SELECT        TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE
-                                                    FROM            INFORMATION_SCHEMA.TABLES) AS source INNER JOIN
-                                                        (SELECT        TOP (100) PERCENT VIEW_NAME AS [View], TABLE_SCHEMA, TABLE_NAME AS [Table], COLUMN_NAME AS [Column]
-                                                          FROM            INFORMATION_SCHEMA.VIEW_COLUMN_USAGE
-                                                          ORDER BY [View]) AS views ON source.TABLE_SCHEMA = views.TABLE_SCHEMA AND source.TABLE_NAME = views.[Table] INNER JOIN
-                                                    AmoebaDB.dbo.EntityViewsInfo ON views.[View] = AmoebaDB.dbo.EntityViewsInfo.EntityViewName INNER JOIN
-                                                        (SELECT        [View], ViewProperty, EntityViewPropertyId
-                                                          FROM            AmoebaDB.dbo.EntityViewPropertiesInfo) AS ExistingEVProperties ON views.[Table] = ExistingEVProperties.[View] AND views.[Column] = ExistingEVProperties.ViewProperty
-                          WHERE        (source.TABLE_TYPE = 'View') AND (AmoebaDB.dbo.EntityViewsInfo.ApplicationId = @appId)) AS V INNER JOIN
+                         views.[View], views.[Table], views.[Column], AmoebaDB.dbo.EntityViewsInfo.EntityViewId AS RequestingEntityViewId, MIN(ExistingEVProperties.EntityViewPropertyId) AS providingEntityViewPropertyId
+FROM            (SELECT        TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE
+                          FROM            INFORMATION_SCHEMA.TABLES) AS source INNER JOIN
+                             (SELECT        TOP (100) PERCENT VIEW_NAME AS [View], TABLE_SCHEMA, TABLE_NAME AS [Table], COLUMN_NAME AS [Column]
+                               FROM            INFORMATION_SCHEMA.VIEW_COLUMN_USAGE
+                               ORDER BY [View]) AS views ON source.TABLE_SCHEMA = views.TABLE_SCHEMA AND source.TABLE_NAME = views.[Table] INNER JOIN
+                         AmoebaDB.dbo.EntityViewsInfo ON views.[View] = AmoebaDB.dbo.EntityViewsInfo.EntityViewName INNER JOIN
+                             (SELECT        [View], ViewProperty, EntityViewPropertyId
+                               FROM            AmoebaDB.dbo.EntityViewPropertiesInfo) AS ExistingEVProperties ON views.[Table] = ExistingEVProperties.[View] AND views.[Column] = ExistingEVProperties.ViewProperty
+WHERE        (source.TABLE_TYPE = 'View') AND (AmoebaDB.dbo.EntityViewsInfo.ApplicationId = @appId)
+GROUP BY views.[View], views.[Table], views.[Column], AmoebaDB.dbo.EntityViewsInfo.EntityViewId) AS V INNER JOIN
                          AmoebaDB.dbo.EntityViewProperties ON V.RequestingEntityViewId = AmoebaDB.dbo.EntityViewProperties.EntityViewId AND V.[Column] = AmoebaDB.dbo.EntityViewProperties.Name
+

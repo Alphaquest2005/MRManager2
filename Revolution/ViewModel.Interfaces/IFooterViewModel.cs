@@ -9,9 +9,6 @@ namespace ViewModel.Interfaces
     
     public interface IFooterViewModel : IViewModel
     {
-        ReactiveProperty<IPatientInfo> CurrentPatient { get; }
-        ReactiveProperty<IPatientVisitInfo> CurrentPatientVisit { get; }
-        ReactiveProperty<IPatientSyntomInfo> CurrentPatientSyntom { get; }
-        ReactiveProperty<IInterviewInfo> CurrentInterview { get; }
+       
     }
 }

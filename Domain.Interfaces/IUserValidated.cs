@@ -10,6 +10,6 @@ namespace Domain.Interfaces
 {
     public interface IUserValidated : IProcessSystemMessage
     {
-        ISignInInfo UserSignIn { get; }
+        IUserSignIn UserSignIn { get; }
     }
 }

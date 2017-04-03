@@ -22,11 +22,6 @@ namespace EF.Mappings
 			entityBuilder.Property(t => t.EntryTimeStamp).HasColumnName("EntryTimeStamp").ValueGeneratedOnAdd();
 			entityBuilder.Property(t => t.VATNumber).HasColumnName("VATNumber").IsRequired().HasMaxLength(50);
 		//-------------------Navigation Properties -------------------------------//
-				entityBuilder.HasMany(x => x.OrganisationAddress).WithOne(p => p.Organisations).HasForeignKey(c => c.OrganisationId).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasMany(x => x.OrganisationPhoneNumbers).WithOne(p => p.Organisations).HasForeignKey(c => c.OrganisationId).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasOne(p => p.Organisations_Companys).WithOne(p => p.Organisations).HasForeignKey<Organisations_Companys>(c => c.Id).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasOne(p => p.Organisations_Hotels).WithOne(p => p.Organisations).HasForeignKey<Organisations_Hotels>(c => c.Id).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasMany(x => x.PersonJob).WithOne(p => p.Organisations).HasForeignKey(c => c.OrganisationId).OnDelete(DeleteBehavior.Restrict);
 	
 				//----------------Parent Properties
 	

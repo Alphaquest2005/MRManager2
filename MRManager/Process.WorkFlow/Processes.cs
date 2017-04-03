@@ -22,8 +22,8 @@ namespace Process.WorkFlow
         {
             //new Process(0,0, "Uknown Process", "Unknown Process", "Unknown"),
             new ProcessInfo(1, 0, "Starting System", "Prepare system for Intial Use", "Start","System"),
-            new ProcessInfo<ISignInInfo>(2, 1, "User SignOn", "User Login", "User","System"),
-            new ProcessInfo<ISignInInfo>(3, 2, "Load User Screen", "User Screen", "UserScreen", "joe")
+            new ProcessInfo(2, 1, "User SignOn", "User Login", "User","System"),
+            new ProcessInfo(3, 2, "Load User Screen", "User Screen", "UserScreen", "joe")
         };
 
 
@@ -113,48 +113,48 @@ namespace Process.WorkFlow
                                               expectedSourceType:new SourceType(typeof(IComplexEventService)))
                     
                 },
-                expectedMessageType:typeof(IProcessStateMessage<ISignInInfo>),
-                action:ProcessActions.SignIn.IntializeSigninProcessState,
+                expectedMessageType:typeof(IProcessStateMessage<IUserSignIn>),
+                action: SignIn.IntializeSigninProcessState,
                 processInfo:new StateCommandInfo(2, RevolutionData.Context.Process.Commands.CreateState)),
             new ComplexEventAction(
                 key:"202",
                 processId:2,
                 events:new List<IProcessExpectedEvent>
                 {
-                    new ProcessExpectedEvent<IEntityViewWithChangesFound<ISignInInfo>> (
-                        "UserNameFound", 2, e => e.Entity != null && e.Changes.Count == 1 && e.Changes.ContainsKey(nameof(ISignInInfo.Usersignin)), expectedSourceType: new SourceType(typeof(IEntityViewRepository)), processInfo: new StateEventInfo(2, RevolutionData.Context.User.Events.UserNameFound))
+                    new ProcessExpectedEvent<IEntityViewWithChangesFound<IUserSignIn>> (
+                        "UserNameFound", 2, e => e.Entity != null && e.Changes.Count == 1 && e.Changes.ContainsKey(nameof(IUserSignIn.Username)), expectedSourceType: new SourceType(typeof(IEntityViewRepository)), processInfo: new StateEventInfo(2, RevolutionData.Context.User.Events.UserNameFound))
                 },
-                expectedMessageType:typeof(IProcessStateMessage<ISignInInfo>),
-                action: ProcessActions.SignIn.UserNameFound,
+                expectedMessageType:typeof(IProcessStateMessage<IUserSignIn>),
+                action: SignIn.UserNameFound,
                 processInfo: new StateCommandInfo(2, RevolutionData.Context.Process.Commands.UpdateState)),
             new ComplexEventAction(
                 key:"203",
                 processId: 2,
                 events: new List<IProcessExpectedEvent>
                 {
-                    new ProcessExpectedEvent<IEntityViewWithChangesFound<ISignInInfo>> (processId: 2,
-                                                        eventPredicate: e => e.Entity != null && e.Changes.Count == 2 && e.Changes.ContainsKey(nameof(ISignInInfo.Password)),
+                    new ProcessExpectedEvent<IEntityViewWithChangesFound<IUserSignIn>> (processId: 2,
+                                                        eventPredicate: e => e.Entity != null && e.Changes.Count == 2 && e.Changes.ContainsKey(nameof(IUserSignIn.Password)),
                                                         processInfo: new StateEventInfo(2, RevolutionData.Context.User.Events.UserFound),
                                                         expectedSourceType: new SourceType(typeof(IEntityViewRepository)),
                                                         key: "ValidatedUser")
                 },
-                expectedMessageType: typeof(IProcessStateMessage<ISignInInfo>),
-                action: ProcessActions.SignIn.SetProcessStatetoValidatedUser,
+                expectedMessageType: typeof(IProcessStateMessage<IUserSignIn>),
+                action: SignIn.SetProcessStatetoValidatedUser,
                 processInfo: new StateCommandInfo(2, RevolutionData.Context.Process.Commands.UpdateState)),
             new ComplexEventAction(
                 key:"204",
                 processId: 2,
                 events: new List<IProcessExpectedEvent>
                 {
-                    new ProcessExpectedEvent<IEntityViewWithChangesFound<ISignInInfo>> (processId: 2,
-                                                        eventPredicate: e => e.Entity != null && e.Changes.Count == 2 && e.Changes.ContainsKey(nameof(ISignInInfo.Password)),
+                    new ProcessExpectedEvent<IEntityViewWithChangesFound<IUserSignIn>> (processId: 2,
+                                                        eventPredicate: e => e.Entity != null && e.Changes.Count == 2 && e.Changes.ContainsKey(nameof(IUserSignIn.Password)),
                                                         processInfo: new StateEventInfo(2, RevolutionData.Context.User.Events.UserFound),
                                                         expectedSourceType: new SourceType(typeof(IEntityViewRepository)),
                                                         key: "ValidatedUser")
                 },
                 expectedMessageType:typeof(IUserValidated),
                 processInfo:new StateCommandInfo(2, RevolutionData.Context.Domain.Commands.PublishDomainEvent),
-                action: ProcessActions.SignIn.UserValidated),
+                action: SignIn.UserValidated),
 
             new ComplexEventAction(
                 "205",
@@ -202,66 +202,66 @@ namespace Process.WorkFlow
 
 
 
-            ComplexActions.IntializePulledProcessState<IPatientInfo>(3, "Patient"),
-            ComplexActions.UpdateStateList<IPatientInfo>(3),
-            
+            //ComplexActions.IntializePulledProcessState<IPatientInfo>(3, "Patient"),
+            //ComplexActions.UpdateStateList<IPatientInfo>(3),
 
 
-            ComplexActions.RequestPulledState<IPatientInfo, IPatientDetailsInfo>(3,  "Patient"),
-            ComplexActions.UpdateState<IPatientDetailsInfo>(3),
-            ComplexActions.UpdateStateWhenDataChanges<IPatientInfo,IPatientDetailsInfo>(3, c => c.Id, v => v.Id),
-            ComplexActions.RequestState<IPatientInfo, IPatientAddressesInfo>(3, x => x.Id),
-            ComplexActions.UpdateState<IPatientAddressesInfo>(3),
-            ComplexActions.RequestState<IPatientInfo, IPatientPhoneNumbersInfo>(3, x => x.Id),
-            ComplexActions.UpdateState<IPatientPhoneNumbersInfo>(3),
-            ComplexActions.RequestState<IPatientInfo, IPatientNextOfKinsInfo>(3, x => x.Id),
-            ComplexActions.UpdateState<IPatientNextOfKinsInfo>(3),
-            ComplexActions.RequestPulledState<IPatientInfo, INonResidentInfo>(3, "NonResident"),
-            ComplexActions.UpdateState<INonResidentInfo>(3),
+        
+        //ComplexActions.RequestPulledState<IPatientInfo, IPatientDetailsInfo>(3,  "Patient"),
+        //ComplexActions.UpdateState<IPatientDetailsInfo>(3),
+        //ComplexActions.UpdateStateWhenDataChanges<IPatientInfo,IPatientDetailsInfo>(3, c => c.Id, v => v.Id),
+        //ComplexActions.RequestState<IPatientInfo, IPatientAddressesInfo>(3, x => x.Id),
+        //ComplexActions.UpdateState<IPatientAddressesInfo>(3),
+        //ComplexActions.RequestState<IPatientInfo, IPatientPhoneNumbersInfo>(3, x => x.Id),
+        //ComplexActions.UpdateState<IPatientPhoneNumbersInfo>(3),
+        //ComplexActions.RequestState<IPatientInfo, IPatientNextOfKinsInfo>(3, x => x.Id),
+        //ComplexActions.UpdateState<IPatientNextOfKinsInfo>(3),
+        //ComplexActions.RequestPulledState<IPatientInfo, INonResidentInfo>(3, "NonResident"),
+        //ComplexActions.UpdateState<INonResidentInfo>(3),
 
 
 
 
 
-            ComplexActions.RequestStateList<IPatientInfo, IPatientVisitInfo>(3, c => c.Id,x => x.PatientId),
-            ComplexActions.UpdateStateList<IPatientVisitInfo>(3),
-            ComplexActions.UpdateStateWhenDataChanges<IPatientInfo,IPatientVisitInfo>(3, c => c.Id, v => v.PatientId),
+        //ComplexActions.RequestStateList<IPatientInfo, IPatientVisitInfo>(3, c => c.Id,x => x.PatientId),
+        //ComplexActions.UpdateStateList<IPatientVisitInfo>(3),
+        //ComplexActions.UpdateStateWhenDataChanges<IPatientInfo,IPatientVisitInfo>(3, c => c.Id, v => v.PatientId),
 
-            ComplexActions.RequestStateList<IPatientVisitInfo, IPatientSyntomInfo>(3,c => c.Id, x => x.PatientVisitId),
-            ComplexActions.RequestStateList<ISyntoms, IPatientSyntomInfo>(3,c => c.Id, x => x.SyntomId),
-            ComplexActions.UpdateStateList<IPatientSyntomInfo>(3),
-            ComplexActions.UpdateStateWhenDataChanges<IPatientSyntoms,IPatientSyntomInfo>(3, c => c.Id, v => v.Id),
+        //ComplexActions.RequestStateList<IPatientVisitInfo, IPatientSyntomInfo>(3,c => c.Id, x => x.PatientVisitId),
+        //ComplexActions.RequestStateList<ISyntoms, IPatientSyntomInfo>(3,c => c.Id, x => x.SyntomId),
+        //ComplexActions.UpdateStateList<IPatientSyntomInfo>(3),
+        //ComplexActions.UpdateStateWhenDataChanges<IPatientSyntoms,IPatientSyntomInfo>(3, c => c.Id, v => v.Id),
 
-            ComplexActions.RequestStateList<IPatientSyntomInfo, ISyntomMedicalSystemInfo>(3,c => c.SyntomId, x => x.SyntomId),
-            ComplexActions.UpdateStateList<ISyntomMedicalSystemInfo>(3),
-            ComplexActions.UpdateStateWhenDataChanges<ISyntomMedicalSystems,ISyntomMedicalSystemInfo>(3, c => c.Id, v => v.Id),
-            ComplexActions.UpdateStateWhenDataChanges<IInterviews,IInterviewInfo>(3, c => c.Id, v => v.Id),
-
-
-            ComplexActions.RequestStateList<IInterviewInfo, IQuestionResponseOptionInfo>(3,c => c.Id, x => x.InterviewId),
-            ComplexActions.UpdateStateList<IQuestionResponseOptionInfo>(3),
-            ComplexActions.UpdateStateWhenDataChanges<IQuestionInfo,IQuestionResponseOptionInfo>(3, c => c.Id, v => v.Id),
-            ComplexActions.UpdateStateWhenDataChanges<IResponseInfo,IQuestionResponseOptionInfo>(3, c => c.QuestionId, v => v.Id),
-            ComplexActions.UpdateStateWhenDataChanges<IResponseOptions,IQuestionResponseOptionInfo>(3, c => c.QuestionId, v => v.Id),
-            
-
-            ComplexActions.RequestStateList<IInterviewInfo, IQuestionInfo>(3,c => c.Id, x => x.InterviewId),
-            ComplexActions.UpdateStateList<IQuestionInfo>(3),
-            ComplexActions.UpdateStateWhenDataChanges<IQuestions,IQuestionInfo>(3, c => c.Id, v => v.Id),
+        //ComplexActions.RequestStateList<IPatientSyntomInfo, ISyntomMedicalSystemInfo>(3,c => c.SyntomId, x => x.SyntomId),
+        //ComplexActions.UpdateStateList<ISyntomMedicalSystemInfo>(3),
+        //ComplexActions.UpdateStateWhenDataChanges<ISyntomMedicalSystems,ISyntomMedicalSystemInfo>(3, c => c.Id, v => v.Id),
+        //ComplexActions.UpdateStateWhenDataChanges<IInterviews,IInterviewInfo>(3, c => c.Id, v => v.Id),
 
 
-            EntityComplexActions<ISyntomPriority>.IntializeCache(3),
-            EntityComplexActions<ISyntoms>.IntializeCache(3),
-            EntityComplexActions<ISyntomStatus>.IntializeCache(3),
-            EntityComplexActions<IVisitType>.IntializeCache(3),
-            EntityComplexActions<IPhase>.IntializeCache(3),
-            EntityComplexActions<IMedicalCategory>.IntializeCache(3),
-            EntityComplexActions<IMedicalSystems>.IntializeCache(3),
-            EntityComplexActions<IQuestionResponseTypes>.IntializeCache(3),
-            EntityComplexActions<ISex>.IntializeCache(3),
+        //ComplexActions.RequestStateList<IInterviewInfo, IQuestionResponseOptionInfo>(3,c => c.Id, x => x.InterviewId),
+        //ComplexActions.UpdateStateList<IQuestionResponseOptionInfo>(3),
+        //ComplexActions.UpdateStateWhenDataChanges<IQuestionInfo,IQuestionResponseOptionInfo>(3, c => c.Id, v => v.Id),
+        //ComplexActions.UpdateStateWhenDataChanges<IResponseInfo,IQuestionResponseOptionInfo>(3, c => c.QuestionId, v => v.Id),
+        //ComplexActions.UpdateStateWhenDataChanges<IResponseOptions,IQuestionResponseOptionInfo>(3, c => c.QuestionId, v => v.Id),
 
-            EntityViewComplexActions<IDoctorInfo>.IntializeCache(3)
-        };
+
+        //ComplexActions.RequestStateList<IInterviewInfo, IQuestionInfo>(3,c => c.Id, x => x.InterviewId),
+        //ComplexActions.UpdateStateList<IQuestionInfo>(3),
+        //ComplexActions.UpdateStateWhenDataChanges<IQuestions,IQuestionInfo>(3, c => c.Id, v => v.Id),
+
+
+        //EntityComplexActions<ISyntomPriority>.IntializeCache(3),
+        //EntityComplexActions<ISyntoms>.IntializeCache(3),
+        //EntityComplexActions<ISyntomStatus>.IntializeCache(3),
+        //EntityComplexActions<IVisitType>.IntializeCache(3),
+        //EntityComplexActions<IPhase>.IntializeCache(3),
+        //EntityComplexActions<IMedicalCategory>.IntializeCache(3),
+        //EntityComplexActions<IMedicalSystems>.IntializeCache(3),
+        //EntityComplexActions<IQuestionResponseTypes>.IntializeCache(3),
+        //EntityComplexActions<ISex>.IntializeCache(3),
+
+        //EntityViewComplexActions<IDoctorInfo>.IntializeCache(3)
+    };
 
         public static class ComplexActions
         {

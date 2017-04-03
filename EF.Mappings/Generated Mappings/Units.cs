@@ -22,12 +22,6 @@ namespace EF.Mappings
 			entityBuilder.Property(t => t.ShortName).HasColumnName("ShortName").IsRequired().HasMaxLength(50);
 			entityBuilder.Property(t => t.Description).HasColumnName("Description").IsRequired().HasMaxLength(50);
 		//-------------------Navigation Properties -------------------------------//
-				entityBuilder.HasMany(x => x.BloodPressure).WithOne(p => p.Units).HasForeignKey(c => c.UnitId).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasMany(x => x.Height).WithOne(p => p.Units).HasForeignKey(c => c.UnitId).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasMany(x => x.Pulse).WithOne(p => p.Units).HasForeignKey(c => c.UnitId).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasMany(x => x.Respiration).WithOne(p => p.Units).HasForeignKey(c => c.UnitId).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasMany(x => x.Temperature).WithOne(p => p.Units).HasForeignKey(c => c.UnitId).OnDelete(DeleteBehavior.Restrict);
-				entityBuilder.HasMany(x => x.Weight).WithOne(p => p.Units).HasForeignKey(c => c.UnitId).OnDelete(DeleteBehavior.Restrict);
 	
 				//----------------Parent Properties
 	

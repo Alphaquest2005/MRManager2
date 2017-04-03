@@ -9,7 +9,6 @@ using Interfaces;
 using JB.Collections.Reactive;
 using Reactive.Bindings;
 using ReactiveUI;
-using ValidationSets;
 using ViewModel.Interfaces;
 using ViewModelInterfaces;
 
@@ -25,10 +24,5 @@ namespace ViewModels
             this.WireEvents();
         }
 
-        
-        public ReactiveProperty<IPatientInfo> CurrentPatient { get; } = new ReactiveProperty<IPatientInfo>();
-        public ReactiveProperty<IPatientVisitInfo> CurrentPatientVisit { get; } = new ReactiveProperty<IPatientVisitInfo>();
-        public ReactiveProperty<IPatientSyntomInfo> CurrentPatientSyntom { get; } = new ReactiveProperty<IPatientSyntomInfo>();
-        public ReactiveProperty<IInterviewInfo> CurrentInterview { get; } = new ReactiveProperty<IInterviewInfo>();
     }
 }

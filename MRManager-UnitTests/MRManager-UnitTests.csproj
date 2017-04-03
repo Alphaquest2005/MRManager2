@@ -87,14 +87,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Process-03-PatientInfo.cs" />
     <Compile Include="SingleThreadTaskScheduler.cs" />
-    <Compile Include="ObservableViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DynamicViewModelTests.cs" />
-    <Compile Include="Process-02-SignOn.cs" />
-    <Compile Include="Process-01-SystemIntialization.cs" />
-    <Compile Include="DbContextUnitTest.cs" />
     <Compile Include="Development.cs" />
     <Compile Include="UnitTest1.cs" />
   </ItemGroup>

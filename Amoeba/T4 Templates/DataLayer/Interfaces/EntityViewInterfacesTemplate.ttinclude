@@ -31,7 +31,7 @@ using SystemInterfaces;
 namespace Interfaces
 {
 	
-	public partial interface I<#= EntityView.Name #>:IEntity  
+	public partial interface I<#= EntityView.Name #>:IEntityView<<#= EntityView.Entity.Name #>>
 	{
 <#+
 	foreach (var prop in EntityView.EntityViewProperties)
