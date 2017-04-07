@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="NullEntity.cs" />
     <Compile Include="Process\Agent.cs" />
+    <Compile Include="Process\ComplexEventActionInfo.cs" />
     <Compile Include="Process\ComplexEventLog.cs" />
     <Compile Include="Process\ProcessExpectedEventInfo.cs" />
     <Compile Include="Process\ComplexEventService.cs" />

@@ -34,7 +34,7 @@ namespace ViewModels
         }
 
         public MainWindowViewModel()
-            : base(new SystemProcess(Processes.ProcessInfos.FirstOrDefault(), new Agent("System"), new MachineInfo(Environment.MachineName, Environment.ProcessorCount)),
+            : base(new SystemProcess(RevolutionData.Context.Process.StartUpProcess, new Agent("System"), new MachineInfo(Environment.MachineName, Environment.ProcessorCount)),
                   new ViewInfo("MainWindowViewModel", "", ""),
                   ProcessViewModels.ProcessViewModelInfos.FirstOrDefault()?.Subscriptions,
                   ProcessViewModels.ProcessViewModelInfos.FirstOrDefault()?.Publications,

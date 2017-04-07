@@ -7,13 +7,13 @@ using System.ComponentModel;
 
 namespace GenSoft.DBContexts
 {
-	public partial class GenSoftDBContext
+	public partial class GenProDBContext
 	{
-		private static readonly GenSoftDBContext _instance = new GenSoftDBContext();
+		private static readonly GenProDBContext _instance = new GenProDBContext();
 
-		public static GenSoftDBContext Instance => _instance;
+		public static GenProDBContext Instance => _instance;
 
-		static GenSoftDBContext()
+		static GenProDBContext()
 		{
 			if (System.ComponentModel.LicenseManager.UsageMode == LicenseUsageMode.Designtime) return;
 			Instance.Database.EnsureDeleted();

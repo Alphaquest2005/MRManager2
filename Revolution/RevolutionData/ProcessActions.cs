@@ -17,6 +17,15 @@ namespace RevolutionData
     public static class ProcessActions
     {
         public const int NullProcess = -1;
+
+        public static Func<IStateCommand, IStateEvent,IProcessAction> ProcessActionFunc => (stateCommand,stateEvent) => new ProcessAction(
+                        action: async cp => await Task.Run(() => new SystemProcessStarted(
+                            new StateEventInfo(cp.Actor.Process.Id, stateEvent),
+                            cp.Actor.Process, cp.Actor.Source)),
+                        processInfo: cp => new StateCommandInfo(cp.Actor.Process.Id, stateCommand),
+                        expectedSourceType: new SourceType(typeof(IComplexEventService)));
+
+
         public static IProcessAction ProcessStarted => new ProcessAction(
                         action: async cp => await Task.Run(() => new SystemProcessStarted(
                             new StateEventInfo(cp.Actor.Process.Id, Context.Process.Events.ProcessStarted),

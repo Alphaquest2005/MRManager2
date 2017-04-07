@@ -49,8 +49,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Generated DBContexts\MRManagerDBContext-Intialization.cs" />
-    <Compile Include="Generated DBContexts\MRManagerDBContext.cs" />
+    <Compile Include="Generated DBContexts\GenSoftDbContext-Intialization.cs" />
+    <Compile Include="Generated DBContexts\GenSoftDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -60,7 +60,7 @@
     <Compile Include="PulledEntityDataContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <Resource Include="app.config" />
     <None Include="project.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -71,10 +71,6 @@
     <ProjectReference Include="..\DomainMessages\DomainMessages.csproj">
       <Project>{7EE26A5B-63E6-450E-B4BD-66D0205FB492}</Project>
       <Name>DomainMessages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EF.Mappings\GenSoft.Mappings.csproj">
-      <Project>{DA54313C-4B98-49B1-A8F9-B5827F121886}</Project>
-      <Name>GenSoft.Mappings</Name>
     </ProjectReference>
     <ProjectReference Include="..\EFEntities\GenSoft.Entities.csproj">
       <Project>{fad2a8c8-a1b4-4a3c-8e37-0388c0e3733c}</Project>

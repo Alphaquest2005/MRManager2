@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IComplexEventInfo.cs" />
     <Compile Include="IEntityNotFound.cs" />
     <Compile Include="IEntityChanges.cs" />
     <Compile Include="IFailedMessageData.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="ISystemProcessStarted.cs" />
     <Compile Include="IMedia.cs" />
     <Compile Include="IUpdateEntity.cs" />
+    <Compile Include="IUserSignIn.cs" />
     <Compile Include="RowState.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="IGetEntityById.cs" />

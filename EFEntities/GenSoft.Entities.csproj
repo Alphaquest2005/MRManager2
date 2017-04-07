@@ -49,13 +49,27 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ApplicationSetting.cs" />
+    <Compile Include="ComplexEventAction.cs" />
+    <Compile Include="ExpectedEvent.cs" />
+    <Compile Include="MachineInfo.cs" />
     <Compile Include="EFEntity.cs" />
+    <Compile Include="Process.cs" />
+    <Compile Include="ProcessStateInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateCommandInfo.cs" />
+    <Compile Include="StateEventInfo.cs" />
+    <Compile Include="StateInfo.cs" />
+    <Compile Include="UserSignIn.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{ad573873-c8e6-4ea3-93f5-0d39a92fc9f6}</Project>
       <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Revolution\Actor.Interfaces\Actor.Interfaces.csproj">
+      <Project>{8b10c72d-9f33-4290-b562-44cf1f718fa5}</Project>
+      <Name>Actor.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Revolution\Common\Common.csproj">
       <Project>{cb6d5fbc-0c13-437d-b4f3-a0ec4d5673b3}</Project>

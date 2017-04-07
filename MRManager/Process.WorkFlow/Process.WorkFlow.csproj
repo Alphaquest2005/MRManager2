@@ -37,7 +37,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -55,6 +54,14 @@
     <ProjectReference Include="..\..\DomainMessages\DomainMessages.csproj">
       <Project>{7ee26a5b-63e6-450e-b4bd-66d0205fb492}</Project>
       <Name>DomainMessages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EFDataContext\GenSoft.DBContext.csproj">
+      <Project>{27c692a7-9601-43fb-8243-42b997107649}</Project>
+      <Name>GenSoft.DBContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EFEntities\GenSoft.Entities.csproj">
+      <Project>{fad2a8c8-a1b4-4a3c-8e37-0388c0e3733c}</Project>
+      <Name>GenSoft.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Interfaces\Interfaces.csproj">
       <Project>{ad573873-c8e6-4ea3-93f5-0d39a92fc9f6}</Project>

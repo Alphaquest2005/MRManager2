@@ -8,20 +8,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GenSoft.DBContexts
 {
-	public partial class GenSoftDBContext:DbContext
+	public partial class GenProDBContext:DbContext
 	{
 		//public DbSet<ApplicationSetting> ApplicationSettings { get; set; }
 		
 	
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer(DBContext.Properties.Settings.Default.DbConnectionString);
+			optionsBuilder.UseSqlServer(Domain.DBContext.Properties.Settings.Default.DbConnectionString);
 		}
 	
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 				
 				//VisitTypeMap.Map(modelBuilder.Entity<VisitType>());
-		}
+			}
 	}
 }

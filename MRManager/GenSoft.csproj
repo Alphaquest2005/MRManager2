@@ -106,7 +106,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Resource Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataTemplates\DataTemplates.csproj">
@@ -120,10 +120,6 @@
     <ProjectReference Include="..\DomainMessages\DomainMessages.csproj">
       <Project>{7ee26a5b-63e6-450e-b4bd-66d0205fb492}</Project>
       <Name>DomainMessages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EF.Mappings\GenSoft.Mappings.csproj">
-      <Project>{da54313c-4b98-49b1-a8f9-b5827f121886}</Project>
-      <Name>GenSoft.Mappings</Name>
     </ProjectReference>
     <ProjectReference Include="..\EFDataContext\GenSoft.DBContext.csproj">
       <Project>{27c692a7-9601-43fb-8243-42b997107649}</Project>

@@ -1,10 +1,17 @@
-﻿namespace SystemInterfaces
+﻿using System.ComponentModel.Composition;
+
+namespace SystemInterfaces
 {
-    
-    public interface IMachineInfo
-    {
+    [InheritedExport]
+    public interface IMachineInfo{
 
         string MachineName { get; }
         int Processors { get; }
+    }
+
+    [InheritedExport]
+    public interface IApplicationSetting
+    {
+        bool AutoRun { get; }
     }
 }

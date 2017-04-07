@@ -5,6 +5,4 @@
     {
        string UserId { get; }
     }
-
-  
 }
