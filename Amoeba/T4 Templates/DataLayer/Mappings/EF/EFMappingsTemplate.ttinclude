@@ -1,5 +1,5 @@
 ﻿<#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
 <#@ import namespace="System.Linq" #>
 <#@ assembly name="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
@@ -10,24 +10,26 @@
 
 public class EFMappingTemplate : CSharpTemplate
 {
-	public EFMappingTemplate(ApplicationEntity entity)
+	public EFMappingTemplate(ApplicationEntity entity,string appName)
 	{
-		Entity = entity;
+	    Entity = entity;
+	    AppName = appName;
 	}
 
-	public ApplicationEntity Entity { get;}
+    public ApplicationEntity Entity { get;}
+    public string AppName { get; set; }
 
-	public override string TransformText()
+    public override string TransformText()
 	{
 		base.TransformText();
 #>
 using System;
-using EF.Entities;
+using <#=AppName#>.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EF.Mappings
+namespace <#=AppName#>.Mappings
 {
 	public class <#= Entity.Entity.Name #>Map
 	{

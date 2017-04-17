@@ -1,5 +1,5 @@
 ﻿<#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
 <#@ import namespace="System.Linq" #>
 <#@ assembly name="Microsoft.CSharp" #>
@@ -27,7 +27,7 @@ public class AutoEntityViewViewModelTemplate : CSharpTemplate
 #>
 using System;
 using Core.Common.UI;
-using EF.Entities;
+using <#=AppName#>.Entities;
 
 using Interfaces;
 using Utilities;

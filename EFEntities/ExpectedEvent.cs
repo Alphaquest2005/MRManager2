@@ -5,7 +5,7 @@ using Common.DataEntites;
 
 namespace GenSoft.Entities
 {
-    public class ExpectedEvent :BaseEntity, IProcessExpectedEvent
+    public class ExpectedEvent :BaseEntity
     {
         public virtual int ProcessId { get; set; }
         public IProcessStateInfo ProcessInfo => StateInfo;
@@ -18,9 +18,8 @@ namespace GenSoft.Entities
         public Type EventType => Type.GetType(EventTypeString);
         public virtual string Key { get; set; }
 
-        public virtual string EventPredicateString { get; set; }
-        [NotMapped]
-        public Func<IProcessSystemMessage, bool> EventPredicate { get; set; }
+        public virtual Predicate EventPredicate { get; set; }
+       
     }
 
     public class SourceType : BaseEntity, ISourceType

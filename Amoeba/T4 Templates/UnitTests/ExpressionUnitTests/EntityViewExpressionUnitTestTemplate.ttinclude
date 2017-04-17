@@ -1,5 +1,5 @@
 <#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="T4Entities" #>
 <#@ assembly name="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
@@ -28,7 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using EF.DBContexts;
+using <#=AppName#>.DBContexts;
 using Entity.Expressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

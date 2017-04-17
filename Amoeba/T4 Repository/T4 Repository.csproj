@@ -49,9 +49,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MoreLinq">
-      <HintPath>..\..\Amoeba Projects\MRManager\MRManager\packages\morelinq.2.0.0-beta05\lib\net35\MoreLinq.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -80,8 +77,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Revolution\LinqSpecs\LinqSpecs.csproj">
-      <Project>{D60875A3-0DE2-409D-86A0-F540224D054C}</Project>
+    <ProjectReference Include="..\LinqSpecs\LinqSpecs.csproj">
+      <Project>{49ba2d36-de2b-4995-9ff8-86c35bc55180}</Project>
       <Name>LinqSpecs</Name>
     </ProjectReference>
     <ProjectReference Include="..\Specifications\Specifications.csproj">

@@ -66,8 +66,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Revolution\LinqSpecs\LinqSpecs.csproj">
-      <Project>{d60875a3-0de2-409d-86a0-f540224d054c}</Project>
+    <ProjectReference Include="..\LinqSpecs\LinqSpecs.csproj">
+      <Project>{49ba2d36-de2b-4995-9ff8-86c35bc55180}</Project>
       <Name>LinqSpecs</Name>
     </ProjectReference>
     <ProjectReference Include="..\T4 Entities\T4 Entities.csproj">

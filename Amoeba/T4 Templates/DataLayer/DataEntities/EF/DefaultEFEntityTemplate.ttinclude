@@ -1,5 +1,5 @@
 ﻿<#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
 <#@ assembly name="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ import namespace="System.Linq" #>
@@ -10,16 +10,20 @@
 
 public class DefaulEFEntityTemplate : CSharpTemplate
 {
-	
+	public string AppName { get; set; }
+	public DefaulEFEntityTemplate(string appName)
+	{
+	    this.AppName = appName;
+	}
 
-	public override string TransformText()
+    public override string TransformText()
 	{
 		base.TransformText();
 #>
 using Common.Dynamic;
 using SystemInterfaces;
 
-namespace EF.Entities
+namespace <#=AppName#>.Entities
 {
 	public class EFEntity<T>: Expando where T: IEntity
 	{
@@ -42,4 +46,6 @@ namespace EF.Entities
 		return this.GenerationEnvironment.ToString();
 	}
 }
+
+    
 #>

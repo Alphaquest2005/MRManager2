@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using SystemInterfaces;
+using BootStrapper;
+using GenSoft.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PredicateBuilder;
 
@@ -15,15 +18,15 @@ namespace MRManager_UnitTests
         public void TestMethod1()
         {
 
-            List<string> typeChain = new List<string> { "Changes", "Count" };
+            var p = new Predicate { Type = "IEntityViewWithChangesFound<IUserSignIn>", Path = "Changes", Operation = "Count", Value = "2" };
+            var type = BootStrapper.BootStrapper.Container.GetExportedTypes(p.Type).FirstOrDefault();
 
-            // A real live predicate built up from string values. Set a breakpoint and examine the predicate.DebugView
-            Type type = typeof (IEntityViewWithChangesFound<IUserSignIn>);
-            Expression<Func<IEntityViewWithChangesFound<IUserSignIn>, bool>> predicate = (Expression<Func<IEntityViewWithChangesFound<IUserSignIn>, bool>>) typeof(Instance)
-                .GetMethod("Build", BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)
-                .MakeGenericMethod(type)
-                .Invoke(null, new object[] { typeChain, OperatorType.Equal, "2", null });
-           // Expression<Func<IEntityViewWithChangesFound<IUserSignIn>, bool>> predicate = PredicateBuilder.Instance.Build(type,typeChain, OperatorType.Equal, "2", null);
+            var rpredicate =
+                typeof(Utilities.Predicate).GetMethod("GetTypePredicate")
+                    .MakeGenericMethod(type)
+                    .Invoke(null, new object[] { p });
+
+            var predicate = Utilities.Predicate.GetTypePredicate<IEntityViewWithChangesFound<IUserSignIn>>(p);
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿{
-  "dependencies": {},
+  "dependencies": {
+    "morelinq": "2.3.0"
+  },
   "frameworks": {
     "net461": {}
   },
   "runtimes": {
-    "win-x64": {}
+    "win": {}
   }
 }

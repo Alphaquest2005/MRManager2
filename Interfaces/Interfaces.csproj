@@ -60,46 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Generated Interfaces\EntityAttributes.cs" />
-    <Compile Include="Generated Interfaces\MedicalCategory.cs" />
-    <Compile Include="Generated Interfaces\MedicalSystemInterviews.cs" />
-    <Compile Include="Generated Interfaces\MedicalSystems.cs" />
-    <Compile Include="Generated Interfaces\Patients.cs" />
-    <Compile Include="Generated Interfaces\Phase.cs" />
-    <Compile Include="Generated Interfaces\SyntomMedicalSystems.cs" />
-    <Compile Include="Generated Interfaces\SyntomPriority.cs" />
-    <Compile Include="Generated Interfaces\SyntomStatus.cs" />
-    <Compile Include="Generated Interfaces\UserSignIn.cs" />
-    <Compile Include="Generated Interfaces\VisitType.cs" />
     <Compile Include="IPersons.cs" />
-    <Compile Include="Generated Interfaces\Allergies.cs" />
-    <Compile Include="Generated Interfaces\ApplicationSetting.cs" />
-    <Compile Include="Generated Interfaces\Cities.cs" />
-    <Compile Include="Generated Interfaces\Countries.cs" />
-    <Compile Include="Generated Interfaces\DefaultImages.cs" />
-    <Compile Include="Generated Interfaces\Interviews.cs" />
-    <Compile Include="Generated Interfaces\MaritalStatus.cs" />
-    <Compile Include="Generated Interfaces\Media.cs" />
-    <Compile Include="Generated Interfaces\MediaTypes.cs" />
-    <Compile Include="Generated Interfaces\Occupations.cs" />
-    <Compile Include="Generated Interfaces\Organisations.cs" />
-    <Compile Include="Generated Interfaces\Parishes.cs" />
-    <Compile Include="Generated Interfaces\PatientResponses.cs" />
-    <Compile Include="Generated Interfaces\PatientSyntoms.cs" />
-    <Compile Include="Generated Interfaces\PatientVisit.cs" />
-    <Compile Include="Generated Interfaces\PersonMedia.cs" />
-    <Compile Include="Generated Interfaces\Persons.cs" />
-    <Compile Include="Generated Interfaces\Persons_Doctor.cs" />
-    <Compile Include="Generated Interfaces\PhoneTypes.cs" />
-    <Compile Include="Generated Interfaces\Questions.cs" />
-    <Compile Include="Generated Interfaces\Response.cs" />
-    <Compile Include="Generated Interfaces\ResponseImages.cs" />
-    <Compile Include="Generated Interfaces\ResponseOptions.cs" />
-    <Compile Include="Generated Interfaces\ResponseSuggestions_Interviews.cs" />
-    <Compile Include="Generated Interfaces\Sex.cs" />
-    <Compile Include="Generated Interfaces\States.cs" />
-    <Compile Include="Generated Interfaces\Syntoms.cs" />
-    <Compile Include="Generated Interfaces\Units.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

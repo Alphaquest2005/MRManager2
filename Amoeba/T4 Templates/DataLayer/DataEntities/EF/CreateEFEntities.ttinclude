@@ -5,8 +5,7 @@
 <#@ include file="EFEntityTemplate.ttinclude" #>
 <#@ include file="EntityViewTemplate.ttinclude" #>
 <#@ include file="DefaultEFEntityTemplate.ttinclude" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
-<#@ import namespace="T4Entities" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="System.IO" #>
 <#+
 // <copyright file="DataLayer.tt" company="">
@@ -17,7 +16,7 @@
 		// create simple properties
 		foreach (var entity in entities)
 		{
-			var tpl = new EFEntityTemplate(entity);
+			var tpl = new EFEntityTemplate(entity, app.Name);
 			tpl.Output.Project = Path.Combine(appFolder, settings["Project"]) ;
 			tpl.Output.File = settings["Folder"] + @"\" + entity.Entity.Name + ".cs";
 			tpl.Render(); 
@@ -26,13 +25,13 @@
 
 		foreach (var entityView in entities.SelectMany(x=> x.Entity.EntityViews))
 		{
-			var tpl = new EntityViewEntityTemplate(entityView);
+			var tpl = new EntityViewEntityTemplate(entityView, app.Name);
 			tpl.Output.Project = Path.Combine(appFolder, settings["Project"]) ;
 			tpl.Output.File = settings["Folder"] + @"\Entity Views\" + entityView.Name + ".cs";
 			tpl.Render(); 
 		}
 
-			var dtpl = new DefaulEFEntityTemplate();
+			var dtpl = new DefaulEFEntityTemplate(app.Name);
 			dtpl.Output.Project = Path.Combine(appFolder, settings["Project"]) ;
 			dtpl.Output.File =  @"EFEntity.cs";
 			dtpl.Render();
@@ -46,12 +45,14 @@
 
 		foreach (var entityView in entities)
 		{
-			var tpl = new EntityViewEntityTemplate(entityView);
+			var tpl = new EntityViewEntityTemplate(entityView, app.Name);
 			tpl.Output.Project = Path.Combine(appFolder, settings["Project"]) ;
 			tpl.Output.File = settings["Folder"] + @"\Entity Views\" + entityView.Name + ".cs";
 			tpl.Render(); 
 		}
 
 	}
+
+
 
 #>

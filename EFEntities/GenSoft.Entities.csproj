@@ -49,11 +49,15 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ApplicationSetting.cs" />
     <Compile Include="ComplexEventAction.cs" />
-    <Compile Include="ExpectedEvent.cs" />
-    <Compile Include="MachineInfo.cs" />
     <Compile Include="EFEntity.cs" />
+    <Compile Include="ExpectedEvent.cs" />
+    <Compile Include="Generated Entities\ApplicationSetting.cs" />
+    <Compile Include="Generated Entities\Machines.cs" />
+    <Compile Include="Generated Entities\Processes.cs" />
+    <Compile Include="Generated Entities\Users.cs" />
+    <Compile Include="MachineInfo.cs" />
+    <Compile Include="Predicate.cs" />
     <Compile Include="Process.cs" />
     <Compile Include="ProcessStateInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +67,10 @@
     <Compile Include="UserSignIn.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GenSoft.Interface\GenSoft.Interface.csproj">
+      <Project>{f90cc1c1-1f4e-4719-817b-9a14ce56a5ce}</Project>
+      <Name>GenSoft.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{ad573873-c8e6-4ea3-93f5-0d39a92fc9f6}</Project>
       <Name>Interfaces</Name>

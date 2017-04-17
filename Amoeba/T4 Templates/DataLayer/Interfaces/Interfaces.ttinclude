@@ -4,7 +4,7 @@
 <#@ include file="InterfacesTemplate.ttinclude" #>
 <#@ include file="EntityViewInterfacesTemplate.ttinclude" #>
 
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.IO" #>
 <#@ import namespace="T4Entities" #>
@@ -17,7 +17,7 @@
 		// create simple properties
 		foreach (var entity in entities)
 		{
-			var tpl = new InterfaceTemplate(entity);
+			var tpl = new InterfaceTemplate(entity, app.Name);
 			tpl.Output.Project = Path.Combine(appFolder, settings["Project"]) ;
 			tpl.Output.File = settings["Folder"] + @"\" + entity.Entity.Name + ".cs";
 			tpl.Render();
@@ -27,7 +27,7 @@
 
 		    foreach (var entityView in entity.Entity.EntityViews)
 		    {
-		        var vtpl = new EntityViewInterfaceTemplate(entityView);
+		        var vtpl = new EntityViewInterfaceTemplate(entityView, app.Name);
 				vtpl.Output.Project = Path.Combine(appFolder, settings["Project"]) ;
 				vtpl.Output.File = settings["Folder"] + @"\EntityViews\" + entityView.Name + ".cs";
 				vtpl.Render(); 

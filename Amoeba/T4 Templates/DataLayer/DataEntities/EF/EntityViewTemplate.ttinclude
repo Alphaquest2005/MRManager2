@@ -1,5 +1,5 @@
 ﻿<#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
 <#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\Specifications\bin\Debug\Specifications.dll"#>
 <#@ import namespace="Specifications" #>
@@ -15,24 +15,26 @@
 
 public class EntityViewEntityTemplate : CSharpTemplate
 {
-	public EntityViewEntityTemplate(EntityView entityView)
+	public EntityViewEntityTemplate(EntityView entityView,string appName)
 	{
-		EntityView = entityView;
+	    EntityView = entityView;
+	    AppName = appName;
 	}
 
-	public EntityView EntityView { get;}
+    public EntityView EntityView { get;}
+    public string AppName { get; set; }
 
-	public override string TransformText()
+    public override string TransformText()
 	{
 		base.TransformText();
 #>
 using System;
 using System.Collections.Generic;
 using Common.DataEntites;
-using EF.Entities;
-using Interfaces;
+using <#=AppName#>.Entities;
+using <#=AppName#>.Interfaces;
 
-namespace EF.Entities
+namespace <#=AppName#>.Entities
 {
 	public partial class <#= EntityView.Name #>: BaseEntity, I<#= EntityView.Name #>
 	{

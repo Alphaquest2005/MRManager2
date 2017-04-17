@@ -95,6 +95,14 @@
       <Project>{2f8bef84-3c02-48a4-a576-fbf41e3fffdd}</Project>
       <Name>DataTemplates</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain.DBContext\Domain.DBContext.csproj">
+      <Project>{9b50a87e-765f-4caa-a2d7-674aad7f68b2}</Project>
+      <Name>Domain.DBContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
+      <Project>{5862261e-e3c5-4e28-a56a-d319e4b9daef}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain.Interfaces\Domain.Interfaces.csproj">
       <Project>{e41cf673-fe71-4aae-a8fc-b571a36c1211}</Project>
       <Name>Domain.Interfaces</Name>
@@ -105,11 +113,15 @@
     </ProjectReference>
     <ProjectReference Include="..\EFDataContext\GenSoft.DBContext.csproj">
       <Project>{27C692A7-9601-43FB-8243-42B997107649}</Project>
-      <Name>EF.DBContext</Name>
+      <Name>GenSoft.DBContext</Name>
     </ProjectReference>
     <ProjectReference Include="..\EFEntities\GenSoft.Entities.csproj">
       <Project>{FAD2A8C8-A1B4-4A3C-8E37-0388C0E3733C}</Project>
-      <Name>EF.Entities</Name>
+      <Name>GenSoft.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenSoft.Interface\GenSoft.Interface.csproj">
+      <Project>{f90cc1c1-1f4e-4719-817b-9a14ce56a5ce}</Project>
+      <Name>GenSoft.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{AD573873-C8E6-4EA3-93F5-0D39A92FC9F6}</Project>
@@ -121,7 +133,7 @@
     </ProjectReference>
     <ProjectReference Include="..\MRManager\GenSoft.csproj">
       <Project>{83852b7c-5680-4695-9190-df230a6004a1}</Project>
-      <Name>MRManager</Name>
+      <Name>GenSoft</Name>
     </ProjectReference>
     <ProjectReference Include="..\MRManager\Process.WorkFlow\Process.WorkFlow.csproj">
       <Project>{4F0BAA58-3B45-4136-8095-445D406B4D23}</Project>
@@ -179,6 +191,10 @@
       <Project>{e3d04176-3758-4c9d-84f3-7a4d3859eae5}</Project>
       <Name>EventMessages</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Revolution\ExpressionComputations\ExpressionComputations.csproj">
+      <Project>{d4455c5b-2921-4122-a32d-b19380a11ca5}</Project>
+      <Name>ExpressionComputations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Revolution\LinqSpecs\LinqSpecs.csproj">
       <Project>{d60875a3-0de2-409d-86a0-f540224d054c}</Project>
       <Name>LinqSpecs</Name>
@@ -226,6 +242,10 @@
     <ProjectReference Include="..\Revolution\ViewModel.Interfaces\ViewModel.Interfaces.csproj">
       <Project>{2f936e24-723e-4e7a-b21c-d6f618c74651}</Project>
       <Name>ViewModel.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Revolution\XamlGenericTypeExtension\XamlGenericTypeExtension.csproj">
+      <Project>{dc325a78-b3ca-4717-89c6-28fc15a385d7}</Project>
+      <Name>XamlGenericTypeExtension</Name>
     </ProjectReference>
     <ProjectReference Include="..\ValidationSets\ValidationSets.csproj">
       <Project>{6a9c99e7-2552-4a6c-b26e-2d727c5d85ce}</Project>

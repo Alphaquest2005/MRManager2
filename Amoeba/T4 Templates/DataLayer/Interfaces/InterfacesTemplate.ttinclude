@@ -1,5 +1,5 @@
 ﻿<#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
 <#@ assembly name="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\Amoeba\Amoeba\packages\morelinq.1.4.0\lib\net35\MoreLinq.dll" #>
@@ -12,14 +12,16 @@
 
 public class InterfaceTemplate : CSharpTemplate
 {
-	public InterfaceTemplate(ApplicationEntity entity)
+	public InterfaceTemplate(ApplicationEntity entity,string appName)
 	{
-		Entity = entity;
+	    Entity = entity;
+	    AppName = appName;
 	}
 
-	public ApplicationEntity Entity { get;}
+    public ApplicationEntity Entity { get;}
+    public string AppName { get; set; }
 
-	public override string TransformText()
+    public override string TransformText()
 	{
 		base.TransformText();
 #>
@@ -29,7 +31,7 @@ using System.ComponentModel.Composition;
 using SystemInterfaces;
 
 
-namespace Interfaces
+namespace <#=AppName#>.Interfaces
 {
 	[InheritedExport]
 	public partial interface I<#= Entity.Entity.Name #>:IEntity  

@@ -5,28 +5,29 @@
 
 
 using GenSoft.Entities;
+using GenSoft.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace GenSoft.DBContexts
 {
-	public partial class GenSoftDbContext:DbContext
+	public partial class GenSoftDBContext:DbContext
 	{
-		public DbSet<MachineInfo> Machines { get; set; }
-        public DbSet<ApplicationSetting> ApplicationSettings { get; set; }
-        public DbSet<Process> Processes { get; set; }
-        public DbSet<UserSignIn> Users { get; set; }
-        public DbSet<ComplexEventAction> ComplextEventActions { get; set; } 
-
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		public DbSet<ApplicationSetting> ApplicationSettings { get; set; }
+		public DbSet<Machines> Machines { get; set; }
+		public DbSet<Processes> Processes { get; set; }
+		public DbSet<Users> Users { get; set; }
+	
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder.UseSqlServer(DBContext.Properties.Settings.Default.DbConnectionString);
 		}
 	
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-				
-				//VisitTypeMap.Map(modelBuilder.Entity<VisitType>());
-		}
+				ApplicationSettingMap.Map(modelBuilder.Entity<ApplicationSetting>());
+				MachinesMap.Map(modelBuilder.Entity<Machines>());
+				ProcessesMap.Map(modelBuilder.Entity<Processes>());
+				UsersMap.Map(modelBuilder.Entity<Users>());
+			}
 	}
 }

@@ -57,7 +57,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -66,6 +65,7 @@
     <Compile Include="ActorExtensions.cs" />
     <Compile Include="ListExtentions.cs" />
     <Compile Include="NullableExtensions.cs" />
+    <Compile Include="Predicate.cs" />
     <Compile Include="PropertyExtensions.cs" />
     <Compile Include="ExpressionsExtensions.cs" />
     <Compile Include="DictionaryExtensions.cs" />
@@ -85,9 +85,17 @@
     <Compile Include="XamlGenerics.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GenSoft.Interface\GenSoft.Interface.csproj">
+      <Project>{f90cc1c1-1f4e-4719-817b-9a14ce56a5ce}</Project>
+      <Name>GenSoft.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{CB6D5FBC-0C13-437D-B4F3-A0EC4D5673B3}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PredicateBuilder\PredicateBuilder.csproj">
+      <Project>{262b2c50-636d-4e9a-a9c8-6cc41d6adb25}</Project>
+      <Name>PredicateBuilder</Name>
     </ProjectReference>
     <ProjectReference Include="..\SystemInterfaces\SystemInterfaces.csproj">
       <Project>{e3842263-e081-49ba-a1b4-bbe82b24e2db}</Project>

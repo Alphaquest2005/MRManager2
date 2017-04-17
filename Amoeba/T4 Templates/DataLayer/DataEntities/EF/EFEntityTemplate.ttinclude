@@ -1,8 +1,7 @@
 ﻿<#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
 <#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\Specifications\bin\Debug\Specifications.dll"#>
-<#@ import namespace="Specifications" #>
 <#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\Specifications\bin\Debug\LinqSpecs.dll"#>
 <#@ assembly name="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ import namespace="System.Linq" #>
@@ -15,12 +14,14 @@
 
 public class EFEntityTemplate : CSharpTemplate
 {
-	public EFEntityTemplate(ApplicationEntity entity)
+	public EFEntityTemplate(ApplicationEntity entity, string appName)
 	{
-		Entity = entity;
+	    Entity = entity;
+	    AppName = appName;
 	}
 
-	public ApplicationEntity Entity { get;}
+    public ApplicationEntity Entity { get;}
+	public string AppName { get; }
 
 	public override string TransformText()
 	{
@@ -29,10 +30,10 @@ public class EFEntityTemplate : CSharpTemplate
 using System;
 using System.Collections.Generic;
 using Common.DataEntites;
-using EF.Entities;
-using Interfaces;
+using <#=AppName#>.Entities;
+using <#=AppName#>.Interfaces;
 
-namespace EF.Entities
+namespace <#=AppName#>.Entities
 {
 	public partial class <#= Entity.Entity.Name #>: BaseEntity, I<#= Entity.Entity.Name #>
 	{
@@ -91,4 +92,6 @@ namespace EF.Entities
 		return this.GenerationEnvironment.ToString();
 	}
 }
+
+
 #>

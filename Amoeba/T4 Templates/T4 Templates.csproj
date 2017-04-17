@@ -78,6 +78,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Master-DataEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Master-DataEntities.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Include="Master-DataTemplates.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Master-DataTemplates.ttinclude</DependentUpon>
+    </Compile>
     <Compile Include="Master-UnitTests.cs">
       <DependentUpon>Master-UnitTests.ttinclude</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -90,16 +100,6 @@
     </Compile>
     <Compile Include="Master-Interfaces.cs">
       <DependentUpon>Master-Interfaces.ttinclude</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Master-DataEntities.cs">
-      <DependentUpon>Master-DataEntities.ttinclude</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Master-DataTemplates.cs">
-      <DependentUpon>Master-DataTemplates.ttinclude</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -317,13 +317,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LinqSpecs\LinqSpecs.csproj">
+      <Project>{49ba2d36-de2b-4995-9ff8-86c35bc55180}</Project>
+      <Name>LinqSpecs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\T4Utilities\T4Utilities.csproj">
       <Project>{dee7e1e7-baba-4320-ba9e-e10c55e80252}</Project>
       <Name>T4Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Revolution\LinqSpecs\LinqSpecs.csproj">
-      <Project>{d60875a3-0de2-409d-86a0-f540224d054c}</Project>
-      <Name>LinqSpecs</Name>
     </ProjectReference>
     <ProjectReference Include="..\Specifications\Specifications.csproj">
       <Project>{13fbad97-e771-4506-9313-7c6066c38f72}</Project>

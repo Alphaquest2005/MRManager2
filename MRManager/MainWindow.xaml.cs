@@ -28,17 +28,18 @@ namespace GenSoft
 
             Task.Run(() =>
 		    {
-                var dbContextAssembly = new GenSoftDbContext().GetType().Assembly;
-                var entitiesAssembly = new EFEntity<IEntity>().GetType().Assembly;
-		        using (var ctx = new GenSoftDbContext())
+                var genSoftDBContext = new GenSoftDbContext().GetType().Assembly;
+		        var genSoftEntities = new ApplicationSetting().GetType().Assembly;// new EFEntity<IEntity>().GetType().Assembly;
+
+                using (var ctx = new GenSoftDbContext())
 		        {
 		           BootStrapper.BootStrapper.Instance.StartUp(ctx.ApplicationSettings.FirstOrDefault().AutoRun,
                                                               ctx.Machines.Cast<IMachineInfo>().ToList(),
                                                               ctx.Processes.Cast<IProcessInfo>().ToList(),
                                                               ctx.ComplextEventActions.Select(x => RevolutionData.Context.Process.CreateComplexEventAction.Invoke(RevolutionData.Context.Process.CreateComplexEventActionInfo.Invoke(x))).ToList(),
                                                               ViewModel.WorkFlow.ProcessViewModels.ProcessViewModelInfos.Skip(1).ToList(),
-                                                              dbContextAssembly,
-                                                              entitiesAssembly);
+                                                              genSoftDBContext,
+                                                              genSoftEntities);
                 }
                    
 		    }).ConfigureAwait(false);

@@ -1,9 +1,8 @@
 ﻿<#@ include file="T4Toolbox.tt" #>
-<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Repository\bin\Debug\T4Entities.dll" #>
+<#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\T4 Templates\bin\Debug\T4Entities.dll" #>
 <#@ import namespace="T4Entities" #>
 <#@ assembly name="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ assembly name="C:\Prism\GitRepositiory\MRManager-Amoeba\Amoeba\Amoeba\Amoeba\packages\morelinq.1.4.0\lib\net35\MoreLinq.dll" #>
-<#@ import namespace="MoreLinq" #>
 <#@ import namespace="System.Linq" #>
 <#+
 // <copyright file="EFEntityTemplate.tt" company="">
@@ -12,14 +11,16 @@
 
 public class EntityViewInterfaceTemplate : CSharpTemplate
 {
-	public EntityViewInterfaceTemplate(EntityView entityView)
+	public EntityViewInterfaceTemplate(EntityView entityView,string appName)
 	{
-		EntityView = entityView;
+	    EntityView = entityView;
+	    AppName = appName;
 	}
 
-	public EntityView EntityView { get;}
+    public EntityView EntityView { get;}
+    public string AppName { get; set; }
 
-	public override string TransformText()
+    public override string TransformText()
 	{
 		base.TransformText();
 #>
@@ -28,7 +29,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using SystemInterfaces;
 
-namespace Interfaces
+namespace <#=AppName#>.Interfaces
 {
 	
 	public partial interface I<#= EntityView.Name #>:IEntityView<<#= EntityView.Entity.Name #>>
